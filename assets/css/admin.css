@@ -6182,21 +6182,6 @@ fieldset:disabled .btn {
 .dropdown-toggle:empty::after {
 	margin-left: 0;
 }
-
-.text-kustom {
-	color: #212529;
-}
-.text-custom:hover {
-	color: #4f5052;
-}
-.navbar
-	.navbar-menu-wrapper
-	.navbar-nav
-	.nav-item.dropdown
-	.dropdown-menu.navbar-dropdown
-	.dropdown-item:hover {
-    color: #4f5052;
-}
 .dropdown-menu {
 	position: absolute;
 	z-index: 1000;
@@ -17941,8 +17926,8 @@ code {
 	background: initial;
 }
 .dropdown .dropdown-menu .dropdown-item:hover {
-	background-color: #f8f9fa;
-	color: #ffffff;
+	background-color: grey;
+	color: black;
 }
 
 /* Forms */
