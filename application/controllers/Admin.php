@@ -13,6 +13,7 @@ class Admin extends CI_Controller {
     }
 	
 	public function index () {
+        $this->load->view('admin/temp/nav');
         $this->load->view('admin/index');
 	}
 }
