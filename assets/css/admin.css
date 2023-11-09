@@ -17926,7 +17926,7 @@ code {
 	background: initial;
 }
 .dropdown .dropdown-menu .dropdown-item:hover {
-	background-color: grey;
+	background-color: #e9ecef;
 	color: black;
 }
 

@@ -49,6 +49,7 @@
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Recent Tickets</h4>
+                    <button class=" btn btn-gradient-primary">Piral Dewa Ngoding</button>
                     <div class="table-responsive">
                       <table class="table">
                         <thead>
