@@ -8,6 +8,11 @@
                 </span>
                 <?= $title; ?>
             </h3>
+            <nav aria-label="breadcrumb">
+                <button type="button" class="btn btn-gradient-success btn-rounded btn-icon">
+                    <i class="mdi mdi-plus"></i>
+                </button>
+            </nav>
         </div>
         <div class="row">
             <div class="col-12 grid-margin">
@@ -17,20 +22,20 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th> Students name </th>
-                                        <th> Last Update </th>
-                                        <th> Action </th>
-                                        <th> Action </th>
+                                        <th> Id Users </th>
+                                        <th> Full name </th>
+                                        <th> Username </th>
+                                        <th> Status </th>
                                         <th> Action </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
 
+                                        <td> 2131231 </td>
                                         <td> Ahsan Ramadan </td>
-                                        <td> Dec 5, 2017 </td>
-                                        <td> Dec 5, 2017 </td>
-                                        <td> Dec 5, 2017 </td>
+                                        <td> asan </td>
+                                        <td> admin </td>
                                         <td>
                                             <a class="btn btn-gradient-warning btn-sm" href="">Edit</a>
                                             <a class="btn btn-gradient-danger btn-sm" href="">Delete</a>

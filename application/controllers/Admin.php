@@ -30,6 +30,16 @@ class Admin extends CI_Controller
         $this->load->view('admin/siswa');
         $this->load->view('admin/temp/footer');
     }
+    public function user()
+    {
+        //kirim data (value) ke halaman
+        $data['title'] = 'Users data';
+
+        //tampilkan data siswa
+        $this->load->view('admin/temp/nav', $data);
+        $this->load->view('admin/user');
+        $this->load->view('admin/temp/footer');
+    }
 }
 
 ?>
