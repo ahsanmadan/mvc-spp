@@ -1,7 +1,8 @@
 <?php
-class Admin extends CI_Controller {
+class Admin extends CI_Controller
+{
 
-	public function __construct()
+    public function __construct()
     {
         parent::__construct();
         // Your own constructor code
@@ -11,11 +12,24 @@ class Admin extends CI_Controller {
         //     redirect('Auth/forbiden');
         // }
     }
-	
-	public function index () {
-        $this->load->view('admin/temp/nav');
+
+    public function index()
+    {
+        $data['title'] = 'Dashboard';
+        $this->load->view('admin/temp/nav',$data);
         $this->load->view('admin/index');
-	}
+        $this->load->view('admin/temp/footer');
+    }
+    public function siswa()
+    {
+        //kirim data (value) ke halaman
+        $data['title'] = 'Students data';
+
+        //tampilkan data siswa
+        $this->load->view('admin/temp/nav', $data);
+        $this->load->view('admin/siswa');
+        $this->load->view('admin/temp/footer');
+    }
 }
 
 ?>

@@ -91,9 +91,15 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php">
+                    <a class="nav-link" href="<?= base_url('admin'); ?>">
                         <span class="menu-title">Dashboard</span>
                         <i class="mdi mdi-home menu-icon"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('admin/siswa'); ?>">
+                        <span class="menu-title">Students data</span>
+                        <i class="mdi mdi-account menu-icon"></i>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -109,52 +115,6 @@
                                     href="<?= base_url('pages/'); ?>ui-features/buttons.php">Buttons</a></li>
                             <li class="nav-item"> <a class="nav-link"
                                     href="<?= base_url('pages/'); ?>ui-features/typography.php">Typography</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('pages/'); ?>icons/mdi.php">
-                        <span class="menu-title">Icons</span>
-                        <i class="mdi mdi-contacts menu-icon"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('pages/'); ?>forms/basic_elements.php">
-                        <span class="menu-title">Forms</span>
-                        <i class="mdi mdi-format-list-bulleted menu-icon"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('pages/'); ?>charts/chartjs.php">
-                        <span class="menu-title">Charts</span>
-                        <i class="mdi mdi-chart-bar menu-icon"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('pages/'); ?>tables/basic-table.php">
-                        <span class="menu-title">Tables</span>
-                        <i class="mdi mdi-table-large menu-icon"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="collapse" href="#general-pages" aria-expanded="false"
-                        aria-controls="general-pages">
-                        <span class="menu-title">Sample Pages</span>
-                        <i class="menu-arrow"></i>
-                        <i class="mdi mdi-medical-bag menu-icon"></i>
-                    </a>
-                    <div class="collapse" id="general-pages">
-                        <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link"
-                                    href="<?= base_url('pages/'); ?>samples/blank-page.php"> Blank Page </a></li>
-                            <li class="nav-item"> <a class="nav-link"
-                                    href="<?= base_url('pages/'); ?>samples/login.php"> Login </a></li>
-                            <li class="nav-item"> <a class="nav-link"
-                                    href="<?= base_url('pages/'); ?>samples/register.php"> Register </a></li>
-                            <li class="nav-item"> <a class="nav-link"
-                                    href="<?= base_url('pages/'); ?>samples/error-404.php"> 404 </a></li>
-                            <li class="nav-item"> <a class="nav-link"
-                                    href="<?= base_url('pages/'); ?>samples/error-500.php"> 500 </a></li>
                         </ul>
                     </div>
                 </li>
