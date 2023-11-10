@@ -5,12 +5,16 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dasboard | Muda SPP  </title>
+    <title>Dasboard | Muda SPP </title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>vendors/mdi/css/materialdesignicons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>vendors/css/vendor.bundle.base.css">
+    <!-- font-awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <!-- End plugin css for this page -->
@@ -93,19 +97,19 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('admin'); ?>">
                         <span class="menu-title">Dashboard</span>
-                        <i class="mdi mdi-home menu-icon"></i>
+                        <i class="fa-solid fa-house menu-icon"></i>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('admin/siswa'); ?>">
                         <span class="menu-title">Students data</span>
-                        <i class="mdi mdi-account menu-icon"></i>
+                        <i class="fa-solid fa-graduation-cap menu-icon"></i>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('admin/user'); ?>">
                         <span class="menu-title">Users data</span>
-                        <i class="mdi mdi-account menu-icon"></i>
+                        <i class="fa-solid fa-user-group menu-icon"></i>
                     </a>
                 </li>
                 <li class="nav-item">
