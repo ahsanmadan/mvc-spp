@@ -15,7 +15,7 @@
             <img src="<?= base_url('assets/'); ?>images/dashboard/circle.svg" class="card-img-absolute"
               alt="circle-image" />
             <h4 class="font-weight-normal mb-3">Number of students<i
-                class="ms-1 mdi mdi-account mdi-24px float-right"></i>
+                class="ms-2 fa-solid fa-graduation-cap mdi-24px float-right"></i>
             </h4>
             <h2 class="mb-5">1.231 Students</h2>
             <h6 class="card-text">311+ students added this year</h6>

@@ -101,32 +101,16 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('admin/siswa'); ?>">
+                    <a class="nav-link" href="<?= base_url('siswa'); ?>">
                         <span class="menu-title">Students data</span>
                         <i class="fa-solid fa-graduation-cap menu-icon"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('admin/user'); ?>">
+                    <a class="nav-link" href="<?= base_url('user'); ?>">
                         <span class="menu-title">Users data</span>
                         <i class="fa-solid fa-user-group menu-icon"></i>
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
-                        aria-controls="ui-basic">
-                        <span class="menu-title">Basic UI Elements</span>
-                        <i class="menu-arrow"></i>
-                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-                    </a>
-                    <div class="collapse" id="ui-basic">
-                        <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link"
-                                    href="<?= base_url('pages/'); ?>ui-features/buttons.php">Buttons</a></li>
-                            <li class="nav-item"> <a class="nav-link"
-                                    href="<?= base_url('pages/'); ?>ui-features/typography.php">Typography</a></li>
-                        </ul>
-                    </div>
                 </li>
             </ul>
         </nav>
