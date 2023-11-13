@@ -32,7 +32,20 @@ class User extends CI_Controller
         $this->session->set_flashdata(
             'user_message',
             '<div class="alert alert-success" role="alert">
-           Data User berhasil disimpan!
+            user data saved successfully!
+           </div>'
+        );
+        // arahkan ke halaman..
+        redirect('user');
+    }
+
+    public function hapusUser($id)
+    {
+        $this->um->hapusUser($id);
+        $this->session->set_flashdata(
+            'user_message',
+            '<div class="alert alert-success" role="alert">
+           User data successfully deleted!
            </div>'
         );
         // arahkan ke halaman..

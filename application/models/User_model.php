@@ -12,7 +12,7 @@ class User_model extends CI_Model
         // get data yang dikirim
         $username = $this->input->post('username');
         $pw = $this->input->post('password');
-        $pw_hash = password_hash($pw, PASSWORD_BCRYPT);
+        $pw_hash = password_hash($pw, PASSWORD_DEFAULT);
         $nama = $this->input->post('nama_petugas');
         $level = $this->input->post('level');
         // satukan semua kedalam array data
@@ -25,5 +25,9 @@ class User_model extends CI_Model
 
         // eksekusi query insert data ke table
         $this->db->insert('petugas', $data);
+    }
+
+    public function hapusUser($id){
+        $this->db->delete('petugas', ['id_petugas' => $id]);
     }
 }
