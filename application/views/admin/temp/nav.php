@@ -48,14 +48,14 @@
                             <span class="availability-status online"></span>
                         </div>
                         <div class="nav-profile-text">
-                            <p class="mb-1 text-black fw-bolder">Ahsan Ramadan</p>
+                            <p class="mb-1 text-black fw-bolder"><?= $this->session->userdata['full_name'] ?></p>
                         </div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-profile navbar-dropdown" aria-labelledby="profileDropdown">
                         <a class="dropdown-item" href="#">
                             <i class="mdi mdi-cached me-2 text-success text-kustom"></i> Activity Log </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="<?= base_url('auth/logout') ?>">
                             <i class="mdi mdi-logout me-2 text-primary text-kusto"></i> Signout </a>
                     </div>
                 </li>
@@ -63,7 +63,7 @@
                     <a class="nav-link">
                         <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
                     </a>
-                </li>
+                </li>x
                 <li class="nav-item nav-logout d-none d-lg-block">
                     <a class="nav-link" href="<?= base_url(); ?>">
                         <i class="mdi mdi-power"></i>
@@ -89,8 +89,8 @@
                             <!--change to offline or busy as needed-->
                         </div>
                         <div class="nav-profile-text d-flex flex-column">
-                            <span class="font-weight-bold mb-2">Ahsan Ramadan</span>
-                            <span class="text-secondary text-small">Admin</span>
+                            <span class="font-weight-bold mb-2"><?= $this->session->userdata['full_name'] ?>n</span>
+                            <span class="text-secondary text-small"><?= $this->session->userdata['level'] ?></span>
                         </div>
                     </a>
                 </li>
