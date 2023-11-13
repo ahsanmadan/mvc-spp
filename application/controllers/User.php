@@ -51,6 +51,18 @@ class User extends CI_Controller
         // arahkan ke halaman..
         redirect('user');
     }
+
+    public function editUser($id){
+        $this->um->editUser($id);
+        $this->session->set_flashdata(
+            'user_message',
+            '<div class="alert alert-success" role="alert">
+            User data is successfully updated!
+           </div>'
+        );
+        // arahkan ke halaman..
+        redirect('user');
+    }
 }
 
 ?>

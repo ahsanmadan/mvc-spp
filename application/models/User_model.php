@@ -27,6 +27,19 @@ class User_model extends CI_Model
         $this->db->insert('petugas', $data);
     }
 
+    public function editUser($id){
+        $nama = $this->input->post('nama_edit');
+        $username = $this->input->post('username_edit');
+        $level = $this->input->post('level_edit');
+
+        $data = [
+            'nama_petugas' => $nama,
+            'username' => $username,
+            'level' => $level
+        ];
+        $this->db->where('id_petugas',$id)->update('petugas', $data);
+    }
+
     public function hapusUser($id){
         $this->db->delete('petugas', ['id_petugas' => $id]);
     }
