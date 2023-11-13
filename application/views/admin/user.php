@@ -16,6 +16,9 @@
             </nav>
         </div>
         <div class="row">
+            <?= $this->session->flashdata('user_message') ?>
+        </div>
+        <div class="row">
             <div class="col-12 grid-margin">
                 <div class="card">
                     <div class="card-body">
@@ -31,17 +34,21 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php $no= 1; ?>
+                                    <?php foreach($user as $row) :?>
                                     <tr>
 
-                                        <td> 2131231 </td>
-                                        <td> Ahsan Ramadan </td>
-                                        <td> asan </td>
-                                        <td> admin </td>
+                                        <td> <?= $row['id_petugas'] ?> </td>
+                                        <td> <?= $row['nama_petugas'] ?> </td>
+                                        <td> <?= $row['username'] ?> </td>
+                                        <td> <?= $row['level'] ?> </td>
                                         <td>
                                             <a class="btn btn-gradient-warning btn-sm" href="">Edit</a>
-                                            <a class="btn btn-gradient-danger btn-sm" href="">Delete</a>
+                                            <a href="<?= base_url('') ?>" class="btn btn-gradient-danger btn-sm" href="">Delete</a>
                                         </td>
                                     </tr>
+                                    <?php $no++; ?>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
@@ -55,37 +62,40 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add User</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form class="row g-3">
+                    <form class="row g-3" action="<?= base_url('user/tambahUser') ?>" method="post">
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="fic21312...">
+                            <input autocomplete="off" type="text" class="form-control" placeholder="fic21312..."
+                                name="username">
                         </div>
                         <div class="col-md-6">
                             <label for="inputPassword4" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="inputPassword4">
+                            <input type="password" class="form-control" id="inputPassword4" name="password">
                         </div>
                         <div class="col-12">
                             <label for="inputAddress" class="form-label">Full name</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Sanh Fic...">
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Sanh Fic..."
+                                name="nama_petugas">
                         </div>
                         <div class="col-md-4">
                             <label for="inputState" class="form-label">Status</label>
-                            <select id="inputState" class="form-select">
+                            <select id="inputState" class="form-select" name="level">
                                 <option disabled selected>Choose...</option>
                                 <option value="admin">Admin</option>
                                 <option value="petugas">Petugas</option>
                             </select>
                         </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-gradient-primary btn-fw">Submit</button>
+                        </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <a href="<?= base_url('admin/tambahUser') ?>" type="button" class="btn btn-gradient-primary btn-fw">Submit</a>
-                </div>
+
             </div>
         </div>
     </div>
