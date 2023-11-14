@@ -10,7 +10,7 @@ class User extends CI_Controller
         // cek login
         if(!$this->session->userdata('username')) {
             $this->session->set_flashdata(
-                'user_message',
+                'login_message',
                 '<div class="alert alert-danger" role="alert">
                 Please login first!
                </div>'

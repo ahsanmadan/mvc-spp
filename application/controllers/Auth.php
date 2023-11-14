@@ -46,7 +46,7 @@ class Auth extends CI_Controller
         } else {
           // jika password salah
           $this->session->set_flashdata(
-            'user_message',
+            'login_message',
             '<div class="alert alert-danger" role="alert">
             The username or password you entered is inccorect!
            </div>'
@@ -57,7 +57,7 @@ class Auth extends CI_Controller
       } else {
         // jika user tidak aktif
         $this->session->set_flashdata(
-          'user_message',
+          'login_message',
           '<div class="alert alert-danger" role="alert">
           You have not yet activated your account to access!
          </div>'
@@ -67,7 +67,7 @@ class Auth extends CI_Controller
     } else {
       // jika username tidak ada
       $this->session->set_flashdata(
-        'user_message',
+        'login_message',
         '<div class="alert alert-danger" role="alert">
         The username or password you entered is inccorect!
        </div>'
