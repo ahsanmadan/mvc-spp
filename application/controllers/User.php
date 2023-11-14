@@ -8,9 +8,9 @@ class User extends CI_Controller
         // Your own constructor code
         $this->load->model('User_model', 'um'); //load model Admin
         // cek login
-        // if(!$this->session->userdata('username')) {
-        //     redirect('Auth/forbiden');
-        // }
+        if(!$this->session->userdata('username')) {
+            redirect('auth');
+        }
     }
 
     public function index()

@@ -8,9 +8,9 @@ class Siswa extends CI_Controller
         // Your own constructor code
         $this->load->model('Siswa_model', 'sm'); //load model Admin
         // cek login
-        // if(!$this->session->userdata('username')) {
-        //     redirect('Auth/forbiden');
-        // }
+        if(!$this->session->userdata('username')) {
+            redirect('auth');
+        }
     }
 
     public function index()

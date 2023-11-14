@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2023 at 05:50 AM
+-- Generation Time: Nov 14, 2023 at 02:15 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -167,8 +167,8 @@ CREATE TABLE `petugas` (
 --
 
 INSERT INTO `petugas` (`id_petugas`, `username`, `password`, `nama_petugas`, `level`, `is_active`) VALUES
-(8, 'ceng', '$2y$10$hK4Qch0/wNE09aphwhrRoO6.DZ.GLyvzAKIam9NYVdw0VDftgYP1i', 'Renjiro', 'admin', 1),
-(9, 'NjikJiro', '$2y$10$XUBVxoXbxRZXK50nGnYKBOrHuyTT.JRf3cWwAQpVXUjoqqjwIcbPm', 'Adyadma Renjiro', 'admin', 1);
+(9, 'NjikJiro', '$2y$10$XUBVxoXbxRZXK50nGnYKBOrHuyTT.JRf3cWwAQpVXUjoqqjwIcbPm', 'Adyadma Renjiro', 'admin', 1),
+(10, 'Ahsan', '$2y$10$qiFUo3O.1HQgHhg05IqGdOJmQwb7Nt1Dc89nttQWZJu5OhAP1HbBu', 'Ahsan Ramadan', 'admin', 1);
 
 -- --------------------------------------------------------
 
@@ -210,7 +210,7 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT for table `petugas`
 --
 ALTER TABLE `petugas`
-  MODIFY `id_petugas` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_petugas` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
