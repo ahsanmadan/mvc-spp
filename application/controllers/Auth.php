@@ -45,15 +45,34 @@ class Auth extends CI_Controller
           redirect('admin');
         } else {
           // jika password salah
-          echo "Password mu Salah!";
+          $this->session->set_flashdata(
+            'user_message',
+            '<div class="alert alert-danger" role="alert">
+            The username or password you entered is inccorect!
+           </div>'
+           
+        );
+        redirect('auth');
         }
       } else {
         // jika user tidak aktif
-        echo "User tidak aktif!";
+        $this->session->set_flashdata(
+          'user_message',
+          '<div class="alert alert-danger" role="alert">
+          You have not yet activated your account to access!
+         </div>'
+      );
+      redirect('auth');
       }
     } else {
       // jika username tidak ada
-      echo "Username tidak ada!";
+      $this->session->set_flashdata(
+        'user_message',
+        '<div class="alert alert-danger" role="alert">
+        The username or password you entered is inccorect!
+       </div>'
+    );
+    redirect('auth');
     }
   }
 

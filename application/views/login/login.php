@@ -31,7 +31,8 @@
                     <div class="col-lg-4 mx-auto">
                         <div class="auth-form-light text-left p-5">
                             <div class="brand-logo text-center">
-                                <img src="<?= base_url('assets/images/logo.png') ?>">
+                                <img src="<?= base_url('assets/images/logo.png') ?>" class="mb-3">
+                                <?= $this->session->flashdata('user_message') ?>
                             </div>
                             <form class="pt-3" method="POST" action="<?= base_url('auth') ?>">
                                 <div class="form-group">

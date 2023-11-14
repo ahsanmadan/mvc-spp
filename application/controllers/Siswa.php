@@ -9,6 +9,12 @@ class Siswa extends CI_Controller
         $this->load->model('Siswa_model', 'sm'); //load model Admin
         // cek login
         if(!$this->session->userdata('username')) {
+            $this->session->set_flashdata(
+                'user_message',
+                '<div class="alert alert-danger" role="alert">
+                Please login first!
+               </div>'
+            );
             redirect('auth');
         }
     }
