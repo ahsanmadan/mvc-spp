@@ -40,6 +40,15 @@ class Auth extends CI_Controller
             'level' => $datauser['level']
           ];
           $this->session->set_userdata($data);
+          $this->session->set_flashdata(
+            'login_message',
+            "<script>
+            $(document).ready(function () {
+                // Panggil fungsi show modal saat halaman dimuat
+                $('#loginModal').modal('show');
+            });
+            </script>"
+          );
 
           // arahkan ke controller admin
           redirect('admin');
@@ -50,9 +59,9 @@ class Auth extends CI_Controller
             '<div class="alert alert-danger" role="alert">
             The username or password you entered is inccorect!
            </div>'
-           
-        );
-        redirect('auth');
+
+          );
+          redirect('auth');
         }
       } else {
         // jika user tidak aktif
@@ -61,8 +70,8 @@ class Auth extends CI_Controller
           '<div class="alert alert-danger" role="alert">
           You have not yet activated your account to access!
          </div>'
-      );
-      redirect('auth');
+        );
+        redirect('auth');
       }
     } else {
       // jika username tidak ada
@@ -71,8 +80,8 @@ class Auth extends CI_Controller
         '<div class="alert alert-danger" role="alert">
         The username or password you entered is inccorect!
        </div>'
-    );
-    redirect('auth');
+      );
+      redirect('auth');
     }
   }
 
@@ -82,7 +91,12 @@ class Auth extends CI_Controller
     $this->session->unset_userdata('username');
     $this->session->unset_userdata('full_name');
     $this->session->unset_userdata('level');
-
+    $this->session->set_flashdata(
+      'login_message',
+      '<div class="alert alert-success" role="alert">
+      You are successfully logged out
+     </div>'
+    );
     // arahkan ke halaman login
     redirect('auth');
   }

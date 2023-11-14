@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <!-- End plugin css for this page -->
@@ -48,7 +50,9 @@
                             <span class="availability-status online"></span>
                         </div>
                         <div class="nav-profile-text">
-                            <p class="mb-1 text-black fw-bolder text-capitalize"><?= $this->session->userdata['full_name'] ?></p>
+                            <p class="mb-1 text-black fw-bolder text-capitalize">
+                                <?= $this->session->userdata['full_name'] ?>
+                            </p>
                         </div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-profile navbar-dropdown" aria-labelledby="profileDropdown">
@@ -89,8 +93,12 @@
                             <!--change to offline or busy as needed-->
                         </div>
                         <div class="nav-profile-text d-flex flex-column">
-                            <span class="font-weight-bold mb-2 text-capitalize"><?= $this->session->userdata['full_name'] ?>n</span>
-                            <span class="text-secondary text-small text-capitalize"><?= $this->session->userdata['level'] ?></span>
+                            <span class="font-weight-bold mb-2 text-capitalize">
+                                <?= $this->session->userdata['full_name'] ?>n
+                            </span>
+                            <span class="text-secondary text-small text-capitalize">
+                                <?= $this->session->userdata['level'] ?>
+                            </span>
                         </div>
                     </a>
                 </li>

@@ -5,7 +5,8 @@
       <h3 class="page-title">
         <span class="page-title-icon bg-gradient-primary text-white me-2">
           <i class="fa-solid fa-house"></i>
-        </span> <?= $title; ?>
+        </span>
+        <?= $title; ?>
       </h3>
     </div>
     <div class="row">
@@ -27,8 +28,7 @@
           <div class="card-body">
             <img src="<?= base_url('assets/'); ?>images/dashboard/circle.svg" class="card-img-absolute"
               alt="circle-image" />
-            <h4 class="font-weight-normal mb-3">none <i
-                class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
+            <h4 class="font-weight-normal mb-3">none <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
             </h4>
             <h2 class="mb-5">none</h2>
             <h6 class="card-text">none</h6>
@@ -121,6 +121,22 @@
     </div>
 
   </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+        </div>
+        <div class="modal-body fw-bold">
+          <h3>Konnichiwa <?= $this->session->userdata['full_name'] ?></h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- content-wrapper ends -->
   <!-- partial:partials/_footer.php -->
-  

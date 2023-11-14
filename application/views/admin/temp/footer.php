@@ -5,6 +5,7 @@
             SMK MUDA Pekanbaru</span>
     </div>
 </footer>
+
 <!-- partial -->
 </div>
 <!-- main-panel ends -->
@@ -13,6 +14,7 @@
 </div>
 <!-- container-scroller -->
 <!-- plugins:js -->
+<?= $this->session->flashdata('login_message') ?>
 <script src="<?= base_url('assets/'); ?>vendors/js/vendor.bundle.base.js"></script>
 <!-- endinject -->
 <!-- Plugin js for this page -->
