@@ -12,7 +12,7 @@ class Admin extends CI_Controller
             $this->session->set_flashdata(
                 'login_message',
                 '<div class="alert alert-danger" role="alert">
-                Please login first!
+                Silahkan login terlebih dahulu!
                </div>'
             );
             redirect('auth');

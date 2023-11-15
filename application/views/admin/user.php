@@ -28,11 +28,11 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th> Id Users </th>
-                                        <th> Full name </th>
+                                        <th> ID Petugas </th>
+                                        <th> Nama Petugas </th>
                                         <th> Username </th>
                                         <th> Status </th>
-                                        <th> Action </th>
+                                        <th> Aksi </th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -74,7 +74,7 @@
     </div>
     <!-- modal edit user -->
     <?php $no_modal_edit = 1; ?>
-    <?php foreach ($user as $row): ?>
+    <?php foreach($user as $row): ?>
         <td>
             <div class="modal fade" id="editUserModal<?= $row['id_petugas'] ?>" tabindex="-1"
                 aria-labelledby="exampleModalLabel" aria-hidden="true">

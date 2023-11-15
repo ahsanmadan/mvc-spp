@@ -12,7 +12,7 @@ class User extends CI_Controller
             $this->session->set_flashdata(
                 'login_message',
                 '<div class="alert alert-danger" role="alert">
-                Please login first!
+                Silahkan login terlebih dahulu!
                </div>'
             );
             redirect('auth');
@@ -22,7 +22,7 @@ class User extends CI_Controller
     public function index()
     {
         //kirim data (value) ke halaman
-        $data['title'] = 'Users data';
+        $data['title'] = 'Data Petugas';
         $data['datas'] = $this->um->semuaUser();
         //tampilkan data siswa
         $this->load->view('admin/temp/nav', $data);
@@ -38,7 +38,7 @@ class User extends CI_Controller
         $this->session->set_flashdata(
             'user_message',
             '<div class="alert alert-success" role="alert">
-            user data saved successfully!
+            Data berhasil disimpan!
            </div>'
         );
         // arahkan ke halaman..
@@ -51,7 +51,7 @@ class User extends CI_Controller
         $this->session->set_flashdata(
             'user_message',
             '<div class="alert alert-success" role="alert">
-           User data successfully deleted!
+           Data berhasil dihapus!
            </div>'
         );
         // arahkan ke halaman..
@@ -63,7 +63,7 @@ class User extends CI_Controller
         $this->session->set_flashdata(
             'user_message',
             '<div class="alert alert-success" role="alert">
-            User data is successfully updated!
+            Data berhasil diupdate!
            </div>'
         );
         // arahkan ke halaman..

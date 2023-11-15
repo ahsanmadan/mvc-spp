@@ -21,7 +21,7 @@ class Jurusan extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Major data';
+        $data['title'] = 'Data Jurusan';
         $data['datas'] = $this->jm->semuaJurusan();
         $this->load->view('admin/temp/nav',$data);
         $this->load->view('admin/jurusan');

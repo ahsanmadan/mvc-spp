@@ -15,11 +15,11 @@
           <div class="card-body">
             <img src="<?= base_url('assets/'); ?>images/dashboard/circle.svg" class="card-img-absolute"
               alt="circle-image" />
-            <h4 class="font-weight-normal mb-3">Number of students<i
+            <h4 class="font-weight-normal mb-3">Jumlah Siswa<i
                 class="ms-2 fa-solid fa-graduation-cap mdi-24px float-right"></i>
             </h4>
-            <h2 class="mb-5">1.231 Students</h2>
-            <h6 class="card-text">311+ students added this year</h6>
+            <h2 class="mb-5">1.231 Siswa</h2>
+            <h6 class="card-text">311+ Siswa tahun ini</h6>
           </div>
         </div>
       </div>

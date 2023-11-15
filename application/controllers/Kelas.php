@@ -21,7 +21,7 @@ class Kelas extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Class data';
+        $data['title'] = 'Data Kelas';
         $data['datas'] = $this->km->semuaKelas();
         $this->load->view('admin/temp/nav',$data);
         $this->load->view('admin/kelas');

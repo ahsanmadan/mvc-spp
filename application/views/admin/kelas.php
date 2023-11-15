@@ -28,12 +28,12 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th> Id class </th>
-                                        <th> Class name </th>
-                                        <th> Code of class </th>
-                                        <th> Major id </th>
-                                        <th> Class year </th>
-                                        <th> Action </th>
+                                        <th> ID Kelas </th>
+                                        <th> Nama Kelas </th>
+                                        <th> Kode Kelas </th>
+                                        <th> ID Jurusan </th>
+                                        <th> Tahun Angkatan </th>
+                                        <th> Aksi </th>
                                     </tr>
                                 </thead>
                                 <tbody>

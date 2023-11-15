@@ -28,9 +28,9 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th> Major Id</th>
-                                        <th> Major name </th>
-                                        <th> Major abbreviation </th>
+                                        <th> ID Jurusan</th>
+                                        <th> Nama Jurusan </th>
+                                        <th> Jurusan </th>
                                     </tr>
                                 </thead>
                                 <tbody>

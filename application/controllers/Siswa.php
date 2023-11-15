@@ -12,7 +12,7 @@ class Siswa extends CI_Controller
             $this->session->set_flashdata(
                 'login_message',
                 '<div class="alert alert-danger" role="alert">
-                Please login first!
+                Silahkan login terlebih dahulu!
                </div>'
             );
             redirect('auth');
@@ -22,7 +22,7 @@ class Siswa extends CI_Controller
     public function index()
     {
         //kirim data (value) ke halaman
-        $data['title'] = 'Students data';
+        $data['title'] = 'Data Siswa';
         $data['datas'] = $this->sm->semuaSiswa();
         //tampilkan data siswa
         $this->load->view('admin/temp/nav', $data);

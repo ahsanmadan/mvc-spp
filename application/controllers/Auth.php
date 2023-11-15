@@ -57,7 +57,7 @@ class Auth extends CI_Controller
           $this->session->set_flashdata(
             'login_message',
             '<div class="alert alert-danger" role="alert">
-            The username or password you entered is inccorect!
+            Username atau Password anda salah!
            </div>'
 
           );
@@ -68,7 +68,7 @@ class Auth extends CI_Controller
         $this->session->set_flashdata(
           'login_message',
           '<div class="alert alert-danger" role="alert">
-          You have not yet activated your account to access!
+          Akun anda belum diaktifkan!
          </div>'
         );
         redirect('auth');
@@ -78,7 +78,7 @@ class Auth extends CI_Controller
       $this->session->set_flashdata(
         'login_message',
         '<div class="alert alert-danger" role="alert">
-        The username or password you entered is inccorect!
+        Username atau Password anda salah!
        </div>'
       );
       redirect('auth');
@@ -94,16 +94,9 @@ class Auth extends CI_Controller
     $this->session->set_flashdata(
       'login_message',
       '<div class="alert alert-success" role="alert">
-      You are successfully logged out
+      Anda berhasil keluar!
      </div>'
     );
     // arahkan ke halaman login
     redirect('auth');
   }
-
-  public function forbiden()
-  {
-    // panggil halaman forbiden
-    $this->load->view('login/forbiden');
-  }
-}
