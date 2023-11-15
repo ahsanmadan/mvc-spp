@@ -74,7 +74,7 @@
     </div>
     <!-- modal edit user -->
     <?php $no_modal_edit = 1; ?>
-    <?php foreach($user as $row): ?>
+    <?php foreach($datas as $row): ?>
         <td>
             <div class="modal fade" id="editUserModal<?= $row['id_petugas'] ?>" tabindex="-1"
                 aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -130,7 +130,7 @@
 <?php endforeach; ?>
 <!-- modal delete user -->
 <?php $no_modal_delete = 1; ?>
-<?php foreach ($user as $row): ?>
+<?php foreach ($datas as $row): ?>
     <td>
         <div class="modal fade" id="hapusUserModal<?= $row['id_petugas'] ?>" tabindex="-1"
             aria-labelledby="exampleModalLabel" aria-hidden="true">
