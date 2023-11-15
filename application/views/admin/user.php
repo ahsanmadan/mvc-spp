@@ -73,8 +73,8 @@
 
     </div>
     <!-- modal edit user -->
-    <?php $no_modal_edit = 1; ?>
-    <?php foreach($datas as $row): ?>
+    <?php $no_modal_editUser = 1; ?>
+    <?php foreach ($datas as $row): ?>
         <td>
             <div class="modal fade" id="editUserModal<?= $row['id_petugas'] ?>" tabindex="-1"
                 aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -91,17 +91,18 @@
                                 method="post">
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Full name</label>
-                                    <input name="nama_edit" value="<?= $row['nama_petugas'] ?>" type="text" class="form-control"
-                                        id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <input name="nama_edit" value="<?= $row['nama_petugas'] ?>" type="text"
+                                        class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Username</label>
-                                    <input name="username_edit" value="<?= $row['username'] ?>" type="text" class="form-control"
-                                        id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <input name="username_edit" value="<?= $row['username'] ?>" type="text"
+                                        class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect3">Level</label>
-                                    <select name="level_edit" class="form-control form-control-sm text-dark" id="exampleFormControlSelect3">
+                                    <select name="level_edit" class="form-control form-control-sm text-dark"
+                                        id="exampleFormControlSelect3">
                                         <?php
                                         if ($row['level'] == "admin"):
                                             ?>
@@ -126,7 +127,7 @@
             </div>
     </div>
     </td>
-    <?php $no_modal_edit++; ?>
+    <?php $no_modal_editUser++; ?>
 <?php endforeach; ?>
 <!-- modal delete user -->
 <?php $no_modal_delete = 1; ?>

@@ -6,6 +6,7 @@
     </div>
 </footer>
 
+
 <!-- partial -->
 </div>
 <!-- main-panel ends -->
