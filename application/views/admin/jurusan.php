@@ -4,7 +4,7 @@
         <div class="page-header">
             <h3 class="page-title">
                 <span class="page-title-icon bg-gradient-primary text-white me-2">
-                    <i class="fa-solid fa-graduation-cap"></i>
+                    <i class="fa-solid fa-user-astronaut"></i>
                 </span>
                 <?= $title; ?>
             </h3>
@@ -15,6 +15,11 @@
                 </button>
             </nav>
         </div>
+        <div class="container">
+            <div class="row">
+                <?= $this->session->flashdata('user_message') ?>
+            </div>
+        </div>
         <div class="row">
             <div class="col-12 grid-margin">
                 <div class="card">
@@ -23,34 +28,31 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th> NISN </th>
-                                        <th> NIS </th>
-                                        <th> Nama siswa </th>
-                                        <th> Kelas </th>
-                                        <th> Alamat </th>
-                                        <th> No telp </th>
-                                        <th> Jumlah Bayar </th>
-                                        <th> Aksi </th>
+                                        <th> Major Id</th>
+                                        <th> Major name </th>
+                                        <th> Major abbreviation </th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <?php $no=1; ?>
-                                    <?php foreach($datas as $row) : ?>
-                                    <tr>
+                                    <?php $no = 1; ?>
+                                    <?php foreach ($datas as $row): ?>
+                                        <tr>
 
-                                        <td> <?= $row['nisn'] ?> </td>
-                                        <td> <?= $row['nis'] ?> </td>
-                                        <td> <?= $row['nama_siswa'] ?> </td>
-                                        <td> <?= $row['id_kelas'] ?> </td>
-                                        <td> <?= $row['alamat'] ?> </td>
-                                        <td> <?= $row['no_telp'] ?> </td>
-                                        <td> <?= $row['id_spp'] ?> </td>
-                                        <td>
-                                            <a class="btn btn-gradient-warning btn-sm" href="">Edit</a>
-                                            <a class="btn btn-gradient-danger btn-sm" href="">Delete</a>
-                                        </td>
-                                    </tr>
-                                    <?php $no++; ?>
+                                            <td>
+                                                <?= $row['id_jurusan'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $row['nama_jurusan'] ?>
+                                            </td>
+                                            <td>
+                                                <?= $row['jurusan'] ?>
+                                            </td>
+                                            <td>
+                                                <a type="button" class="btn btn-gradient-warning btn-sm">Edit</a>
+                                                <a type="button" class="btn btn-gradient-danger btn-sm">Delete</a>
+                                            </td>
+                                        </tr>
+                                        <?php $no++; ?>
                                     <?php endforeach; ?>
                                 </tbody>
                             </table>
@@ -59,9 +61,7 @@
                 </div>
             </div>
         </div>
-
-    </div>
-    <!-- modal add user -->
+        <!-- modal add user -->
 <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -103,5 +103,5 @@
         </div>
     </div>
 </div>
-    <!-- content-wrapper ends -->
-    <!-- partial:partials/_footer.php -->
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.php -->

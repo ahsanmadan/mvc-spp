@@ -1,12 +1,12 @@
 <?php
-class Siswa extends CI_Controller
+class Kelas extends CI_Controller
 {
 
     public function __construct()
     {
         parent::__construct();
         // Your own constructor code
-        $this->load->model('Siswa_model', 'sm'); //load model Admin
+        $this->load->model('Kelas_model', 'km'); //load model Admin
         // cek login
         if(!$this->session->userdata('username')) {
             $this->session->set_flashdata(
@@ -21,12 +21,10 @@ class Siswa extends CI_Controller
 
     public function index()
     {
-        //kirim data (value) ke halaman
-        $data['title'] = 'Students data';
-        $data['datas'] = $this->sm->semuaSiswa();
-        //tampilkan data siswa
-        $this->load->view('admin/temp/nav', $data);
-        $this->load->view('admin/siswa');
+        $data['title'] = 'Class data';
+        $data['datas'] = $this->km->semuaKelas();
+        $this->load->view('admin/temp/nav',$data);
+        $this->load->view('admin/kelas');
         $this->load->view('admin/temp/footer');
     }
 }

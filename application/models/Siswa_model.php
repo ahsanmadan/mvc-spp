@@ -3,6 +3,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Siswa_model extends CI_Model
 {
+
+    public function semuaSiswa()
+    {
+        return $this->db->get('siswa')->result_array();
+    }
     public function tambahSiswa()
     {
         // get data yang dikirim

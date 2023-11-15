@@ -130,7 +130,7 @@
         <div class="modal-header">
         </div>
         <div class="modal-body fw-bold">
-          <h3>Konnichiwa <?= $this->session->userdata['full_name'] ?></h5>
+          <h4>Konnichiwa <?= $this->session->userdata['full_name'] ?></h4>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
@@ -138,5 +138,6 @@
       </div>
     </div>
   </div>
+  
   <!-- content-wrapper ends -->
   <!-- partial:partials/_footer.php -->

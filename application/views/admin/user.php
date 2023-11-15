@@ -9,7 +9,7 @@
                 <?= $title; ?>
             </h3>
             <nav aria-label="breadcrumb">
-                <button type="button" data-bs-toggle="modal" data-bs-target="#addUserModal"
+                <button type="button" data-bs-toggle="modal" data-bs-target="#addModal"
                     class="btn btn-gradient-success btn-rounded btn-icon">
                     <i class="mdi mdi-plus"></i>
                 </button>
@@ -37,7 +37,7 @@
                                 </thead>
                                 <tbody>
                                     <?php $no = 1; ?>
-                                    <?php foreach ($user as $row): ?>
+                                    <?php foreach ($datas as $row): ?>
                                         <tr>
 
                                             <td>
@@ -162,7 +162,7 @@
     <?php $no_modal_delete++; ?>
 <?php endforeach; ?>
 <!-- modal add user -->
-<div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

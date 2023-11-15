@@ -23,7 +23,7 @@ class User extends CI_Controller
     {
         //kirim data (value) ke halaman
         $data['title'] = 'Users data';
-        $data['user'] = $this->um->semuaUser();
+        $data['datas'] = $this->um->semuaUser();
         //tampilkan data siswa
         $this->load->view('admin/temp/nav', $data);
         $this->load->view('admin/user');

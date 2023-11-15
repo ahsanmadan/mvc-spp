@@ -94,7 +94,7 @@
                         </div>
                         <div class="nav-profile-text d-flex flex-column">
                             <span class="font-weight-bold mb-2 text-capitalize">
-                                <?= $this->session->userdata['full_name'] ?>n
+                                <?= $this->session->userdata['full_name'] ?>
                             </span>
                             <span class="text-secondary text-small text-capitalize">
                                 <?= $this->session->userdata['level'] ?>
@@ -112,6 +112,18 @@
                     <a class="nav-link" href="<?= base_url('siswa'); ?>">
                         <span class="menu-title">Students data</span>
                         <i class="fa-solid fa-graduation-cap menu-icon"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('kelas'); ?>">
+                        <span class="menu-title">Class data</span>
+                        <i class="fa-solid fa-chalkboard menu-icon"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('jurusan'); ?>">
+                        <span class="menu-title">Major data</span>
+                        <i class="fa-solid fa-user-astronaut menu-icon"></i>
                     </a>
                 </li>
                 <li class="nav-item">
