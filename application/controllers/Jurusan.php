@@ -27,6 +27,48 @@ class Jurusan extends CI_Controller
         $this->load->view('admin/jurusan');
         $this->load->view('admin/temp/footer');
     }
+    public function tambahJurusan()
+    {
+        // input data jurusan ke model
+        $this->jm->tambahJurusan();
+
+        // jika data berhasil disimpan munculkan pesan berhasil
+        $this->session->set_flashdata(
+            'user_message',
+            '<div class="alert alert-success" role="alert">
+            Data berhasil disimpan!
+           </div>'
+        );
+        // arahkan ke halaman..
+        redirect('jurusan');
+    }
+
+    public function editJurusan($id)
+    {
+        $this->jm->editJurusan($id);
+
+        $this->session->set_flashdata(
+            'user_message',
+            '<div class="alert alert-success" role="alert">
+            Data berhasil disimpan!
+           </div>'
+        );
+        // arahkan ke halaman..
+        redirect('jurusan');
+    }
+
+    public function hapusJurusan($id){
+        $this->jm->hapusJurusan($id);
+
+        $this->session->set_flashdata(
+            'user_message',
+            '<div class="alert alert-success" role="alert">
+            Data berhasil dihapus!
+           </div>'
+        );
+        // arahkan ke halaman..
+        redirect('jurusan');
+    }
 }
 
 ?>
