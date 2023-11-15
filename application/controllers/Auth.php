@@ -100,3 +100,10 @@ class Auth extends CI_Controller
     // arahkan ke halaman login
     redirect('auth');
   }
+
+  public function forbiden()
+  {
+    // panggil halaman forbiden
+    $this->load->view('login/forbiden');
+  }
+}
