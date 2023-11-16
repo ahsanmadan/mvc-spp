@@ -67,17 +67,19 @@
                                                 <?= $row['no_telp'] ?>
                                             </td>
                                             <td>
-                                                <?php
+                                            <?php
                                                 $id_spp = $row['id_spp'];
                                                 $query = $this->db->get_where('spp', array('id_spp' => $id_spp));
                                                 $kelas = $query->row();
                                                 $nominal = $kelas->nominal;
-                                                echo "Rp. " . number_format($nominal, 0, ',', '.');
+                                                echo "Rp. ".number_format($nominal, 0,',','.');
                                                 ?>
                                             </td>
                                             <td>
                                                 <a class="btn btn-gradient-warning btn-sm" href="">Edit</a>
-                                                <a type="button" class="btn btn-gradient-danger btn-sm">Delete</a>
+                                                <a type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#hapusModal<?= $row['nisn'] ?>"
+                                                    class="btn btn-gradient-danger btn-sm">Delete</a>
                                             </td>
                                         </tr>
                                         <?php $no++; ?>
