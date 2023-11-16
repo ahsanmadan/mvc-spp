@@ -28,13 +28,10 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th> NISN </th>
-                                        <th> NIS </th>
-                                        <th> Nama siswa </th>
-                                        <th> Kelas </th>
-                                        <th> Alamat </th>
-                                        <th> No telp </th>
-                                        <th> Jumlah Bayar </th>
+                                        <th> Id spp </th>
+                                        <th> Tahun masuk </th>
+                                        <th> Id jurusan </th>
+                                        <th> Nominal </th>
                                         <th> Aksi </th>
                                     </tr>
                                 </thead>
@@ -44,42 +41,26 @@
                                         <tr>
 
                                             <td>
-                                                <?= $row['nisn'] ?>
+                                                <?= $row['id_spp'] ?>
                                             </td>
                                             <td>
-                                                <?= $row['nis'] ?>
-                                            </td>
-                                            <td>
-                                                <?= $row['nama_siswa'] ?>
+                                                <?= $row['tahun_masuk'] ?>
                                             </td>
                                             <td>
                                                 <?php
-                                                $id_kelas = $row['id_kelas'];
-                                                $query = $this->db->get_where('kelas', array('id_kelas' => $id_kelas));
-                                                $kelas = $query->row();
-                                                echo $kelas->kode_kelas;
+                                                $id_jurusan = $row['id_jurusan'];
+                                                $query = $this->db->get_where('jurusan', array('id_jurusan' => $id_jurusan));
+                                                $jurusan = $query->row();
+                                                echo $jurusan->jurusan;
                                                 ?>
                                             </td>
                                             <td>
-                                                <?= $row['alamat'] ?>
-                                            </td>
-                                            <td>
-                                                <?= $row['no_telp'] ?>
-                                            </td>
-                                            <td>
-                                            <?php
-                                                $id_spp = $row['id_spp'];
-                                                $query = $this->db->get_where('spp', array('id_spp' => $id_spp));
-                                                $kelas = $query->row();
-                                                $nominal = $kelas->nominal;
-                                                echo "Rp. ".number_format($nominal, 0,',','.');
+                                                <?php echo "Rp. " . number_format($row['nominal'], 0, ',', '.');
                                                 ?>
                                             </td>
                                             <td>
                                                 <a class="btn btn-gradient-warning btn-sm" href="">Edit</a>
-                                                <a type="button" data-bs-toggle="modal"
-                                                    data-bs-target="#hapusModal<?= $row['nisn'] ?>"
-                                                    class="btn btn-gradient-danger btn-sm">Delete</a>
+                                                <a type="button" class="btn btn-gradient-danger btn-sm">Delete</a>
                                             </td>
                                         </tr>
                                         <?php $no++; ?>
@@ -151,7 +132,7 @@
         <?php $no_modal_edit++; ?>
 <?php endforeach; ?> -->
     <!-- modal delete-->
-    <?php $no_modal_delete = 1; ?>
+    <!-- <?php $no_modal_delete = 1; ?>
     <?php foreach ($datas as $row): ?>
         <td>
             <div class="modal fade" id="hapusModal<?= $row['nisn'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -181,10 +162,10 @@
                 </div>
             </div>
         </td>
-        <?php $no_modal_delete++; ?>
+        <?php $no_modal_delete++; ?> -->
     <?php endforeach; ?>
     <!-- modal add -->
-    <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -238,6 +219,6 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- content-wrapper ends -->
     <!-- partial:partials/_footer.php -->

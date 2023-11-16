@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2023 at 02:15 AM
+-- Generation Time: Nov 16, 2023 at 04:52 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -183,12 +183,57 @@ CREATE TABLE `siswa` (
   `id_kelas` int(11) NOT NULL,
   `alamat` text NOT NULL,
   `no_telp` varchar(13) NOT NULL,
-  `id_spp` int(11) NOT NULL
+  `id_spp` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `siswa`
+--
+
+INSERT INTO `siswa` (`nisn`, `nis`, `nama_siswa`, `id_kelas`, `alamat`, `no_telp`, `id_spp`) VALUES
+('0061097004', '1311', 'Ahsan Ramadan', 7, 'Jalan barau barau', '089621500376', '2019-RPL');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spp`
+--
+
+CREATE TABLE `spp` (
+  `id_spp` varchar(20) NOT NULL,
+  `tahun_masuk` int(4) NOT NULL,
+  `id_jurusan` tinyint(3) NOT NULL,
+  `nominal` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `spp`
+--
+
+INSERT INTO `spp` (`id_spp`, `tahun_masuk`, `id_jurusan`, `nominal`) VALUES
+('2019-RPL', 2019, 1, 400000);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `jurusan`
+--
+ALTER TABLE `jurusan`
+  ADD PRIMARY KEY (`id_jurusan`);
+
+--
+-- Indexes for table `kelas`
+--
+ALTER TABLE `kelas`
+  ADD PRIMARY KEY (`id_kelas`);
+
+--
+-- Indexes for table `pembayaran`
+--
+ALTER TABLE `pembayaran`
+  ADD PRIMARY KEY (`id_pembayaran`);
 
 --
 -- Indexes for table `petugas`
@@ -203,8 +248,26 @@ ALTER TABLE `siswa`
   ADD PRIMARY KEY (`nisn`);
 
 --
+-- Indexes for table `spp`
+--
+ALTER TABLE `spp`
+  ADD PRIMARY KEY (`id_spp`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `jurusan`
+--
+ALTER TABLE `jurusan`
+  MODIFY `id_jurusan` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `kelas`
+--
+ALTER TABLE `kelas`
+  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `petugas`

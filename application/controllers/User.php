@@ -31,17 +31,17 @@ class User extends CI_Controller
     }
     public function tambahUser()
     {
-        // lakukan input data user
+        // post request
         $this->um->tambahUser();
 
-        // jika data berhasil disimpan munculkan pesan berhasil
+        // alert
         $this->session->set_flashdata(
-            'user_message',
+            'message',
             '<div class="alert alert-success" role="alert">
             Data berhasil disimpan!
            </div>'
         );
-        // arahkan ke halaman..
+        // arahkan ke halaman user
         redirect('user');
     }
 
@@ -49,7 +49,7 @@ class User extends CI_Controller
     {
         $this->um->hapusUser($id);
         $this->session->set_flashdata(
-            'user_message',
+            'message',
             '<div class="alert alert-success" role="alert">
            Data berhasil dihapus!
            </div>'
@@ -61,7 +61,7 @@ class User extends CI_Controller
     public function editUser($id){
         $this->um->editUser($id);
         $this->session->set_flashdata(
-            'user_message',
+            'message',
             '<div class="alert alert-success" role="alert">
             Data berhasil diupdate!
            </div>'

@@ -109,35 +109,42 @@
                     </a>
                 </li>
                 <div class="nav-item">
-                <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="menu-title">Siswa</span>
-                <i class="menu-arrow"></i>
-                <i class="fa-solid fa-graduation-cap menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('siswa'); ?>">
-                        <span class="menu-title">Data Siswa</span>
-                        
+                    <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                        aria-controls="ui-basic">
+                        <span class="menu-title">Siswa</span>
+                        <i class="menu-arrow"></i>
+                        <i class="fa-solid fa-graduation-cap menu-icon"></i>
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('kelas'); ?>">
-                        <span class="menu-title">Data Kelas</span>
-                        
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('jurusan'); ?>">
-                        <span class="menu-title">Data Jurusan</span>
-                       
-                    </a>
-                </li>
-                </ul>
-              </div>
+                    <div class="collapse" id="ui-basic">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= base_url('siswa'); ?>">
+                                    <span class="menu-title">Data Siswa</span>
+
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= base_url('kelas'); ?>">
+                                    <span class="menu-title">Data Kelas</span>
+
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= base_url('jurusan'); ?>">
+                                    <span class="menu-title">Data Jurusan</span>
+
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= base_url('dataspp'); ?>">
+                                    <span class="menu-title">Data Spp</span>
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-               
+
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('user'); ?>">
                         <span class="menu-title">Data Petugas</span>
@@ -146,4 +153,3 @@
                 </li>
             </ul>
         </nav>
-        

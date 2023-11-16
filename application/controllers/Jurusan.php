@@ -34,7 +34,7 @@ class Jurusan extends CI_Controller
 
         // jika data berhasil disimpan munculkan pesan berhasil
         $this->session->set_flashdata(
-            'user_message',
+            'message',
             '<div class="alert alert-success" role="alert">
             Data berhasil disimpan!
            </div>'
@@ -48,7 +48,7 @@ class Jurusan extends CI_Controller
         $this->jm->editJurusan($id);
 
         $this->session->set_flashdata(
-            'user_message',
+            'message',
             '<div class="alert alert-success" role="alert">
             Data berhasil disimpan!
            </div>'
@@ -61,7 +61,7 @@ class Jurusan extends CI_Controller
         $this->jm->hapusJurusan($id);
 
         $this->session->set_flashdata(
-            'user_message',
+            'message',
             '<div class="alert alert-success" role="alert">
             Data berhasil dihapus!
            </div>'

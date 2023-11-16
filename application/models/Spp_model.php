@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Siswa_model extends CI_Model
+class Spp_model extends CI_Model
 {
 
-    public function semuaSiswa()
+    public function semuaSpp()
     {
-        return $this->db->get('siswa')->result_array();
+        return $this->db->get('spp')->result_array();
     }
     public function semuadataKelas()
     {

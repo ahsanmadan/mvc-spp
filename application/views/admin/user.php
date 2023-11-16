@@ -17,7 +17,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <?= $this->session->flashdata('user_message') ?>
+                <?= $this->session->flashdata('message') ?>
             </div>
         </div>
         <div class="row">
@@ -73,10 +73,10 @@
 
     </div>
     <!-- modal edit user -->
-    <?php $no_modal_editUser = 1; ?>
+    <?php $no_modal_edit = 1; ?>
     <?php foreach ($datas as $row): ?>
         <td>
-            <div class="modal fade" id="editUserModal<?= $row['id_petugas'] ?>" tabindex="-1"
+            <div class="modal fade" id="editModal<?= $row['id_petugas'] ?>" tabindex="-1"
                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -127,13 +127,13 @@
             </div>
     </div>
     </td>
-    <?php $no_modal_editUser++; ?>
+    <?php $no_modal_edit++; ?>
 <?php endforeach; ?>
 <!-- modal delete user -->
 <?php $no_modal_delete = 1; ?>
 <?php foreach ($datas as $row): ?>
     <td>
-        <div class="modal fade" id="hapusUserModal<?= $row['id_petugas'] ?>" tabindex="-1"
+        <div class="modal fade" id="hapusModal<?= $row['id_petugas'] ?>" tabindex="-1"
             aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -146,8 +146,7 @@
                     <div class="modal-body">
                         <form class="row g-3" action="<?= base_url('user/hapusUser/') . $row['id_petugas'] ?>"
                             method="post">
-                            <span style="font-size:16px">Are you sure you want to
-                                remove <span class="text-capitalize">
+                            <span style="font-size:16px">Apakah anda yakin ingin menghapus data <span class="text-capitalize">
                                     <?= $row['username'] ?>
                                 </span>?</span>
                             <div class="modal-footer">
