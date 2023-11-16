@@ -6,7 +6,12 @@ class Siswa_model extends CI_Model
 
     public function semuaSiswa()
     {
-        return $this->db->get('siswa')->result_array();
+        $this->db->select('*');
+        $this->db->from('siswa');
+        $this->db->order_by('nama_siswa', 'ASC'); // ASC untuk ascending order
+
+        $query = $this->db->get();
+        return $query->result_array();
     }
     public function semuadataKelas()
     {

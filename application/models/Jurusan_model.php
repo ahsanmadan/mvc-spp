@@ -5,7 +5,12 @@ class Jurusan_model extends CI_Model
 {
     public function semuaJurusan()
     {
-        return $this->db->get('jurusan')->result_array();
+        $this->db->select('*');
+        $this->db->from('jurusan');
+        $this->db->order_by('id_jurusan', 'ASC'); // ASC untuk ascending order
+
+        $query = $this->db->get();
+        return $query->result_array();
     }
 
     public function tambahJurusan()

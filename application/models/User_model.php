@@ -5,7 +5,12 @@ class User_model extends CI_Model
 {
     public function semuaUser()
     {
-        return $this->db->get('petugas')->result_array();
+        $this->db->select('*');
+        $this->db->from('petugas');
+        $this->db->order_by('id_petugas', 'ASC'); // ASC untuk ascending order
+
+        $query = $this->db->get();
+        return $query->result_array();
     }
     public function tambahUser()
     {

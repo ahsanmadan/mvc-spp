@@ -5,6 +5,11 @@ class Kelas_model extends CI_Model
 {
     public function semuaKelas()
     {
-        return $this->db->get('kelas')->result_array();
+        $this->db->select('*');
+        $this->db->from('kelas');
+        $this->db->order_by('kode_kelas', 'ASC'); // ASC untuk ascending order
+
+        $query = $this->db->get();
+        return $query->result_array();
     }
 }
