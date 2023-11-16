@@ -26,7 +26,7 @@ class Spp extends CI_Controller
         $data['datas'] = $this->spm->semuaSpp();
         //tampilkan data siswa
         $this->load->view('admin/temp/nav', $data);
-        $this->load->view('admin/dataspp');
+        $this->load->view('admin/spp');
         $this->load->view('admin/temp/footer');
     }
     public function tambahSiswa()
