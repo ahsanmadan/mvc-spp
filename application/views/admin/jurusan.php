@@ -17,7 +17,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <?= $this->session->flashdata('user_message') ?>
+                <?= $this->session->flashdata('message') ?>
             </div>
         </div>
         <div class="row">
