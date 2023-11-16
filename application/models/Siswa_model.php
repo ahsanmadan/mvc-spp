@@ -10,7 +10,21 @@ class Siswa_model extends CI_Model
     }
     public function semuadataKelas()
     {
-        return $this->db->get('kelas')->result_array();
+        $this->db->select('*');
+        $this->db->from('kelas');
+        $this->db->order_by('kode_kelas', 'ASC'); // ASC untuk ascending order
+
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+    public function semuadataSpp()
+    {
+        $this->db->select('*');
+        $this->db->from('spp');
+        $this->db->order_by('id_spp', 'ASC'); // ASC untuk ascending order
+
+        $query = $this->db->get();
+        return $query->result_array();
     }
     public function tambahSiswa()
     {

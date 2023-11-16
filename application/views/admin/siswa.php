@@ -230,9 +230,9 @@
                             <select id="inputState" class="form-select" name="idSpp">
                                 <option disabled selected>Choose...</option>
                                 <?php $nokelas = 1; ?>
-                                <?php foreach ($datasKelas as $rowKelas): ?>
-                                    <option value="<?= $rowKelas['kode_kelas'] ?>">
-                                        <?= $rowKelas['kode_kelas'] ?>
+                                <?php foreach ($datasSpp as $rowSpp): ?>
+                                    <option value="<?= $rowSpp['id_spp'] ?>">
+                                        <?= $rowSpp['id_spp'] ?>
                                     </option>
                                     <?php $nokelas++; ?>
                                 <?php endforeach; ?>
