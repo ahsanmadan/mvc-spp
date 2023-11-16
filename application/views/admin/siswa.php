@@ -227,7 +227,7 @@
                         </div>
                         <div class="col-md-4">
                             <label for="inputState" class="form-label">Id SPP</label>
-                            <select id="inputState" class="form-select" name="kelas">
+                            <select id="inputState" class="form-select" name="idSpp">
                                 <option disabled selected>Choose...</option>
                                 <?php $nokelas = 1; ?>
                                 <?php foreach ($datasKelas as $rowKelas): ?>
