@@ -225,6 +225,19 @@
                                 <?php endforeach; ?>
                             </select>
                         </div>
+                        <div class="col-md-4">
+                            <label for="inputState" class="form-label">Id SPP</label>
+                            <select id="inputState" class="form-select" name="kelas">
+                                <option disabled selected>Choose...</option>
+                                <?php $nokelas = 1; ?>
+                                <?php foreach ($datasKelas as $rowKelas): ?>
+                                    <option value="<?= $rowKelas['kode_kelas'] ?>">
+                                        <?= $rowKelas['kode_kelas'] ?>
+                                    </option>
+                                    <?php $nokelas++; ?>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
                         <div class="form-group">
                             <label for="exampleTextarea1">Alamat</label>
                             <textarea name="alamat" class="form-control" id="exampleTextarea1" rows="4"></textarea>
