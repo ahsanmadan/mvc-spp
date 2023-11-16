@@ -136,15 +136,15 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= base_url('spp'); ?>">
-                                    <span class="menu-title">Data Spp</span>
+                                <a class="nav-link" href="<?= base_url('dataspp'); ?>">
+                                    <span class="menu-title">Data SPP</span>
 
                                 </a>
                             </li>
+                          
                         </ul>
                     </div>
                 </div>
-
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('user'); ?>">
                         <span class="menu-title">Data Petugas</span>

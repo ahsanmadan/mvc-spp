@@ -27,6 +27,20 @@ class Kelas extends CI_Controller
         $this->load->view('admin/kelas');
         $this->load->view('admin/temp/footer');
     }
+
+    public function tambahKelas()
+    {
+        $this->km->tambahKelas();
+
+        $this->session->set_flashdata(
+            'user_message',
+            '<div class="alert alert-success" role="alert">
+            Data berhasil disimpan!
+           </div>'
+        );
+        // arahkan ke halaman..
+        redirect('kelas');
+    }
 }
 
 ?>
