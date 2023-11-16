@@ -67,19 +67,17 @@
                                                 <?= $row['no_telp'] ?>
                                             </td>
                                             <td>
-                                            <?php
+                                                <?php
                                                 $id_spp = $row['id_spp'];
                                                 $query = $this->db->get_where('spp', array('id_spp' => $id_spp));
                                                 $kelas = $query->row();
                                                 $nominal = $kelas->nominal;
-                                                echo "Rp. ".number_format($nominal, 0,',','.');
+                                                echo "Rp. " . number_format($nominal, 0, ',', '.');
                                                 ?>
                                             </td>
                                             <td>
                                                 <a class="btn btn-gradient-warning btn-sm" href="">Edit</a>
-                                                <a type="button" data-bs-toggle="modal"
-                                                    data-bs-target="#hapusModal<?= $row['nisn'] ?>"
-                                                    class="btn btn-gradient-danger btn-sm">Delete</a>
+                                                <a type="button" class="btn btn-gradient-danger btn-sm">Delete</a>
                                             </td>
                                         </tr>
                                         <?php $no++; ?>
@@ -227,7 +225,7 @@
                         </div>
                         <div class="col-md-4">
                             <label for="inputState" class="form-label">Id SPP</label>
-                            <select id="inputState" class="form-select" name="kelas">
+                            <select id="inputState" class="form-select" name="idSpp">
                                 <option disabled selected>Choose...</option>
                                 <?php $nokelas = 1; ?>
                                 <?php foreach ($datasKelas as $rowKelas): ?>
