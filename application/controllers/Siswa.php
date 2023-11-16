@@ -5,9 +5,7 @@ class Siswa extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        // Your own constructor code
-        $this->load->model('Siswa_model', 'sm'); //load model Admin
-        // cek login
+        $this->load->model('Siswa_model', 'sm');
         if (!$this->session->userdata('username')) {
             $this->session->set_flashdata(
                 'login_message',
@@ -21,7 +19,7 @@ class Siswa extends CI_Controller
 
     public function index()
     {
-        //kirim data (value) ke halaman
+        //kirim data ke halaman
         $data['title'] = 'Data Siswa';
         $data['datas'] = $this->sm->semuaSiswa();
         $data['datasKelas'] = $this->sm->semuadataKelas();
@@ -41,7 +39,7 @@ class Siswa extends CI_Controller
             Data berhasil disimpan!
            </div>'
         );
-        // arahkan ke halaman..
+        // arahkan kembali ke halaman siswa
         redirect('siswa');
     }
     public function hapusSiswa($id)
@@ -53,7 +51,18 @@ class Siswa extends CI_Controller
            Data berhasil dihapus!
            </div>'
         );
-        // arahkan ke halaman..
+        // arahkan kembali ke halaman siswa
+        redirect('siswa');
+    }
+    public function editSiswa($id){
+        $this->sm->editSiswa($id);
+        $this->session->set_flashdata(
+            'message',
+            '<div class="alert alert-success" role="alert">
+           Data berhasil diupdate!
+           </div>'
+        );
+        // arahkan kembali ke halaman siswa
         redirect('siswa');
     }
 }

@@ -59,4 +59,21 @@ class Siswa_model extends CI_Model
     public function hapusSiswa($id){
         $this->db->delete('siswa', ['nisn' => $id]);
     }
+    public function editSiswa($id){
+        $nama = $this->input->post('nama');
+        $kelas = $this->input->post('kelas');
+        $alamat = $this->input->post('alamat');
+        $noHp = $this->input->post('nohp');
+        $idSpp = $this->input->post('idSpp');
+
+        $data = [
+            'nama_siswa' => $nama,
+            'id_kelas' => $kelas,
+            'alamat' => $alamat,
+            'no_telp' => $noHp,
+            'id_spp' => $idSpp
+        ];
+
+        $this->db->where('nisn' , $id)->update('siswa',$data);
+    }
 }

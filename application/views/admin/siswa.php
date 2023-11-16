@@ -67,16 +67,18 @@
                                                 <?= $row['no_telp'] ?>
                                             </td>
                                             <td>
-                                            <?php
+                                                <?php
                                                 $id_spp = $row['id_spp'];
                                                 $query = $this->db->get_where('spp', array('id_spp' => $id_spp));
                                                 $kelas = $query->row();
                                                 $nominal = $kelas->nominal;
-                                                echo "Rp. ".number_format($nominal, 0,',','.');
+                                                echo "Rp. " . number_format($nominal, 0, ',', '.');
                                                 ?>
                                             </td>
                                             <td>
-                                                <a class="btn btn-gradient-warning btn-sm" href="">Edit</a>
+                                                <a type="button" data-bs-toggle="modal"
+                                                    data-bs-target="#editModal<?= $row['nisn'] ?>"
+                                                    class="btn btn-gradient-warning btn-sm">Edit</a>
                                                 <a type="button" data-bs-toggle="modal"
                                                     data-bs-target="#hapusModal<?= $row['nisn'] ?>"
                                                     class="btn btn-gradient-danger btn-sm">Delete</a>
@@ -94,62 +96,71 @@
 
     </div>
     <!-- modal edit -->
-    <!-- <?php $no_modal_edit = 1; ?>
+    <?php $no_modal_edit = 1; ?>
     <?php foreach ($datas as $row): ?>
-            <td>
-                <div class="modal fade" id="editModal<?= $row['id_petugas'] ?>" tabindex="-1"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit
-                                    User data
-                                </h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form class="row g-3" action="<?= base_url('user/editUser/') . $row['id_petugas'] ?>"
-                                    method="post">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Full name</label>
-                                        <input name="nama_edit" value="<?= $row['nama_petugas'] ?>" type="text"
-                                            class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Username</label>
-                                        <input name="username_edit" value="<?= $row['username'] ?>" type="text"
-                                            class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect3">Level</label>
-                                        <select name="level_edit" class="form-control form-control-sm text-dark"
-                                            id="exampleFormControlSelect3">
-                                            <?php
-                                            if ($row['level'] == "admin"):
-                                                ?>
-                                                    <option value="admin" selected>Admin</option>
-                                                    <option value="petugas">Petugas</option>
-                                                    <?php
-                                            elseif ($row['level'] == "petugas"):
-                                                ?>
-                                                    <option value="admin">Admin</option>
-                                                    <option value="petugas" selected>Petugas</option>
-                                            <?php endif; ?>
-                                        </select>
-                                    </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-gradient-success btn-fw">Update</button>
-                            </div>
+        <td>
+            <div class="modal fade" id="editModal<?= $row['nisn'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Edit
+                                Data siswa
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="row g-3" action="<?= base_url('siswa/editSiswa/') . $row['nisn'] ?>" method="post">
+                                <div class="col-12">
+                                    <label for="inputAddress" class="form-label">Nama Siswa</label>
+                                    <input value="<?= $row['nama_siswa'] ?>" type="text" class="form-control"
+                                        id="inputAddress" placeholder="Sanstoso.." name="nama">
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputAddress" class="form-label">Nomor Telepon</label>
+                                    <input value="<?= $row['no_telp'] ?>" type="text" class="form-control" id="inputAddress"
+                                        placeholder="0892131312.." name="nohp">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="inputState" class="form-label">Kelas</label>
+                                    <select id="inputState" class="form-select" name="kelas">
+                                        <?php foreach ($datasKelas as $rowKelas): ?>
+                                            <option value="<?= $rowKelas['id_kelas'] ?>"
+                                            <?php if ($rowKelas['id_kelas'] == $row['id_kelas'])
+                                                  echo 'selected'; ?>>
+                                                <?= $rowKelas['kode_kelas'] ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="inputState" class="form-label">Id SPP</label>
+                                    <select id="inputState" class="form-select" name="idSpp">
+                                        <?php foreach ($datasSpp as $rowSpp): ?>
+                                            <option value="<?= $rowSpp['id_spp'] ?>"
+                                            <?php if ($rowSpp['id_spp'] == $row['id_spp'])
+                                                  echo 'selected'; ?>>
+                                                <?= $rowSpp['id_spp'] ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleTextarea1">Alamat</label>
+                                    <textarea name="alamat" class="form-control" id="exampleTextarea1" rows="4"><?= $row['alamat'] ?></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-gradient-success btn-fw">Update</button>
+                                </div>
                             </form>
                         </div>
                     </div>
                 </div>
-        </div>
+            </div>
         </td>
         <?php $no_modal_edit++; ?>
-<?php endforeach; ?> -->
+    <?php endforeach; ?>
     <!-- modal delete-->
     <?php $no_modal_delete = 1; ?>
     <?php foreach ($datas as $row): ?>

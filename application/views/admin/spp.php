@@ -165,23 +165,42 @@
         <?php $no_modal_delete++; ?> -->
     <?php endforeach; ?>
     <!-- modal add -->
-    <!-- <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah siswa</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah data SPP</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form class="row g-3" action="<?= base_url('siswa/tambahSiswa') ?>" method="post">
+                    <form class="row g-3" action="<?= base_url('dataspp/tambahspp') ?>" method="post">
                         <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label">NISN</label>
-                            <input autocomplete="off" type="text" class="form-control" placeholder="00240359.."
-                                name="nisn">
+                            <label for="inputState" class="form-label">Id SPP</label>
+                            <select id="inputState" class="form-select" name="idSpp">
+                                <option disabled selected>Choose...</option>
+                                <?php foreach ($datasKelas as $rowKelas): ?>
+                                    <?php
+                                    // pengecekan ke data base
+                                    $cekdata = false;
+                                    foreach ($datas as $row) {
+                                        if ($rowKelas['kode_kelas'] == $row['id_spp']) {
+                                            $cekdata = true;
+                                            break;
+                                        }
+                                    }
+
+                                    // jika sudah ada maka tampilkan yg belum ada
+                                    if (!$cekdata): ?>
+                                        <option value="<?= $rowKelas['kode_kelas'] ?>">
+                                            <?= $rowKelas['kode_kelas'] ?>
+                                        </option>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            </select>
                         </div>
                         <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">NIS</label>
-                            <input type="text" placeholder="8392.." class="form-control" id="inputPassword4" name="nis">
+                            <label for="inputPassword4" class="form-label">Tahun masuk</label>
+                            <input type="number" placeholder="8392.." class="form-control" id="inputPassword4" name="thn_masuk">
                         </div>
                         <div class="col-12">
                             <label for="inputAddress" class="form-label">Nama Siswa</label>
@@ -219,6 +238,6 @@
 
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- content-wrapper ends -->
     <!-- partial:partials/_footer.php -->
