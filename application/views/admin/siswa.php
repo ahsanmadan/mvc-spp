@@ -126,8 +126,7 @@
                                     <select id="inputState" class="form-select" name="kelas">
                                         <?php foreach ($datasKelas as $rowKelas): ?>
                                             <option value="<?= $rowKelas['id_kelas'] ?>"
-                                            <?php if ($rowKelas['id_kelas'] == $row['id_kelas'])
-                                                  echo 'selected'; ?>>
+                                            <?php if ($rowKelas['id_kelas'] == $row['id_kelas']) echo 'selected'; ?>>
                                                 <?= $rowKelas['kode_kelas'] ?>
                                             </option>
                                         <?php endforeach; ?>

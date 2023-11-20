@@ -59,7 +59,7 @@ class Siswa extends CI_Controller
         $this->session->set_flashdata(
             'message',
             '<div class="alert alert-success" role="alert">
-           Data berhasil diupdate!
+           Data berhasil diperbarui!
            </div>'
         );
         // arahkan kembali ke halaman siswa

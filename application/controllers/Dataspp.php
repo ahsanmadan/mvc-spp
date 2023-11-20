@@ -25,6 +25,7 @@ class Dataspp extends CI_Controller
         $data['title'] = 'Data Spp';
         $data['datas'] = $this->spm->semuaSpp();
         $data['datasKelas'] = $this->spm->semuadataKelas();
+        $data['datasJurusan'] = $this->spm->semuaJurusan();
         //tampilkan data siswa
         $this->load->view('admin/temp/nav', $data);
         $this->load->view('admin/spp');
@@ -32,7 +33,7 @@ class Dataspp extends CI_Controller
     }
     public function tambahSpp()
     {
-        $this->sm->tambahSiswa();
+        $this->spm->tambahSpp();
         // jika data berhasil disimpan munculkan pesan berhasil
         $this->session->set_flashdata(
             'message',
@@ -41,11 +42,11 @@ class Dataspp extends CI_Controller
            </div>'
         );
         // arahkan ke halaman..
-        redirect('siswa');
+        redirect('dataspp');
     }
     public function hapusSpp($id)
     {
-        $this->sm->hapusSpp($id);
+        $this->spm->hapusSpp($id);
         $this->session->set_flashdata(
             'message',
             '<div class="alert alert-success" role="alert">
@@ -53,7 +54,19 @@ class Dataspp extends CI_Controller
            </div>'
         );
         // arahkan ke halaman..
-        redirect('siswa');
+        redirect('dataspp');
+    }
+    public function editSpp($id)
+    {
+        $this->spm->editSpp($id);
+        $this->session->set_flashdata(
+            'message',
+            '<div class="alert alert-success" role="alert">
+           Data berhasil diperbarui!
+           </div>'
+        );
+        // arahkan ke halaman..
+        redirect('dataspp');
     }
 }
 

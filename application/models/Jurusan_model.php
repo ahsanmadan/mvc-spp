@@ -7,7 +7,7 @@ class Jurusan_model extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('jurusan');
-        $this->db->order_by('id_jurusan', 'ASC'); // ASC untuk ascending order
+        $this->db->order_by('id_jurusan', 'ASC'); 
 
         $query = $this->db->get();
         return $query->result_array();
@@ -25,7 +25,7 @@ class Jurusan_model extends CI_Model
             'jurusan' => $jurusan
         ];
 
-        // eksekusi query insert data ke table
+        // masukkan ke data base
         $this->db->insert('jurusan', $data);
     }
 
@@ -34,13 +34,11 @@ class Jurusan_model extends CI_Model
         $namajurusan = $this->input->post('nama_jurusan');
         $jurusan = $this->input->post('jurusan');
 
-        // satukan ke dalam array
         $data = [
             'nama_jurusan' => $namajurusan,
             'jurusan' => $jurusan
         ];
 
-        // eksekusi query insert data ke table
         $this->db->where('id_jurusan',$id)->update('jurusan', $data);
     }
 

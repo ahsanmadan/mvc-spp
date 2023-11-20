@@ -8,7 +8,7 @@ class Siswa_model extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('siswa');
-        $this->db->order_by('nama_siswa', 'ASC'); // ASC untuk ascending order
+        $this->db->order_by('nama_siswa', 'ASC'); 
 
         $query = $this->db->get();
         return $query->result_array();
@@ -17,7 +17,7 @@ class Siswa_model extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('kelas');
-        $this->db->order_by('kode_kelas', 'ASC'); // ASC untuk ascending order
+        $this->db->order_by('kode_kelas', 'ASC'); 
 
         $query = $this->db->get();
         return $query->result_array();
@@ -26,7 +26,7 @@ class Siswa_model extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('spp');
-        $this->db->order_by('id_spp', 'ASC'); // ASC untuk ascending order
+        $this->db->order_by('id_spp', 'ASC');
 
         $query = $this->db->get();
         return $query->result_array();
@@ -42,7 +42,6 @@ class Siswa_model extends CI_Model
         $noHp = $this->input->post('nohp');
         $idSpp = $this->input->post('idSpp');
 
-        // satukan semua kedalam array data
         $data = [
             'nisn' => $nisn,
             'nis' => $nis,
@@ -53,7 +52,7 @@ class Siswa_model extends CI_Model
             'id_spp' => $idSpp
         ];
 
-        // eksekusi query insert data ke table
+        // masukkan ke database
         $this->db->insert('siswa', $data);
     }
     public function hapusSiswa($id){

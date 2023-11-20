@@ -8,7 +8,7 @@ class Kelas extends CI_Controller
         // Your own constructor code
         $this->load->model('Kelas_model', 'km'); //load model Admin
         // cek login
-        if(!$this->session->userdata('username')) {
+        if (!$this->session->userdata('username')) {
             $this->session->set_flashdata(
                 'login_message',
                 '<div class="alert alert-danger" role="alert">
@@ -23,7 +23,8 @@ class Kelas extends CI_Controller
     {
         $data['title'] = 'Data Kelas';
         $data['datas'] = $this->km->semuaKelas();
-        $this->load->view('admin/temp/nav',$data);
+        $data['datasJurusan'] = $this->km->semuaJurusan();
+        $this->load->view('admin/temp/nav', $data);
         $this->load->view('admin/kelas');
         $this->load->view('admin/temp/footer');
     }
@@ -36,6 +37,20 @@ class Kelas extends CI_Controller
             'user_message',
             '<div class="alert alert-success" role="alert">
             Data berhasil disimpan!
+           </div>'
+        );
+        // arahkan ke halaman..
+        redirect('kelas');
+    }
+
+    public function hapusKelas($id)
+    {
+        $this->km->hapusKelas($id);
+
+        $this->session->set_flashdata(
+            'user_message',
+            '<div class="alert alert-success" role="alert">
+            Data berhasil dihapus!
            </div>'
         );
         // arahkan ke halaman..

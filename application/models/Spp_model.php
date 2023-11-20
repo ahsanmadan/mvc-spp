@@ -13,6 +13,15 @@ class Spp_model extends CI_Model
         $query = $this->db->get();
         return $query->result_array();
     }
+    public function semuaJurusan()
+    {
+        $this->db->select('*');
+        $this->db->from('jurusan');
+        $this->db->order_by('id_jurusan', 'ASC'); // ASC untuk ascending order
+
+        $query = $this->db->get();
+        return $query->result_array();
+    }
     public function semuadataKelas()
     {
         $this->db->select('*');
@@ -22,32 +31,45 @@ class Spp_model extends CI_Model
         $query = $this->db->get();
         return $query->result_array();
     }
-    public function tambahSiswa()
+    public function tambahSpp()
     {
         // get data yang dikirim
-        $nisn = $this->input->post('nisn');
-        $nis = $this->input->post('nis');
-        $nama = $this->input->post('nama');
-        $kelas = $this->input->post('kelas');
-        $alamat = $this->input->post('alamat');
-        $noHp = $this->input->post('nohp');
-        $idSpp = $this->input->post('idSpp');
+        $thnMasuk = $this->input->post('thnMasuk');
+        $id_spp = $this->input->post('idSpp');
+        $jurusan = $this->input->post('jurusan');
+        $nominal = $this->input->post('nominal');
 
         // satukan semua kedalam array data
         $data = [
-            'nisn' => $nisn,
-            'nis' => $nis,
-            'nama_siswa' => $nama,
-            'id_kelas' => $kelas,
-            'no_telp' => $noHp,
-            'alamat' => $alamat,
-            'id_spp' => $idSpp
+            'id_spp' => $id_spp,
+            'tahun_masuk' => $thnMasuk,
+            'id_jurusan' => $jurusan,
+            'nominal' => $nominal,
         ];
 
         // eksekusi query insert data ke table
-        $this->db->insert('siswa', $data);
+        $this->db->insert('spp', $data);
     }
-    public function hapusSiswa($id){
-        $this->db->delete('siswa', ['nisn' => $id]);
+    public function hapusSpp($id)
+    {
+        $this->db->delete('spp', ['id_spp' => $id]);
+    }
+
+    public function editSpp($id)
+    {
+        $thnMasuk = $this->input->post('thnMasuk');
+        $id_spp = $this->input->post('idSpp');
+        $jurusan = $this->input->post('jurusan');
+        $nominal = $this->input->post('nominal');
+
+        // satukan semua kedalam array data
+        $data = [
+            'id_spp' => $id_spp,
+            'tahun_masuk' => $thnMasuk,
+            'id_jurusan' => $jurusan,
+            'nominal' => $nominal,
+        ];
+
+        $this->db->where('id_spp', $id)->update('spp', $data);
     }
 }
