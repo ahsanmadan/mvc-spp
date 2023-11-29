@@ -48,7 +48,7 @@
                                                 <?= $row['nama_kelas'] ?>
                                             </td>
                                             <td>
-                                                <?= $row['kode_kelas'] ?>
+                                                <?= $row['kode_kelas'] ?>   
                                             </td>
                                             <td>
                                                 <?= $row['id_jurusan'] ?>

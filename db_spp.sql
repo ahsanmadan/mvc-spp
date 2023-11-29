@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2023 at 04:52 AM
+-- Generation Time: Nov 29, 2023 at 08:13 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -40,13 +40,10 @@ CREATE TABLE `jurusan` (
 INSERT INTO `jurusan` (`id_jurusan`, `nama_jurusan`, `jurusan`) VALUES
 (1, 'Rekayasa Perangkat Lunak', 'RPL'),
 (2, 'Teknik Komputer Jaringan', 'TKJ'),
-(3, 'Multimedia', 'MM'),
 (4, 'Otomatisasi Tata Kelola Perkantoran', 'OTKP'),
 (5, 'Akuntansi dan Keuangan Lembaga', 'AKL'),
 (6, 'Perbankan Syariah', 'PS'),
 (7, 'Bisnis Daring dan Pemasaran', 'BDP'),
-(8, 'Teknik Desain Grafis', 'TDG'),
-(10, 'Teknologi Desain', 'TD'),
 (11, 'Desain Komunikasi Visual', 'DKV');
 
 -- --------------------------------------------------------
@@ -68,9 +65,6 @@ CREATE TABLE `kelas` (
 --
 
 INSERT INTO `kelas` (`id_kelas`, `nama_kelas`, `kode_kelas`, `id_jurusan`, `tahun_angkatan`) VALUES
-(1, 'MM1', '2017-MM1', 3, '2017'),
-(2, 'MM2', '2017-MM2', 3, '2017'),
-(3, 'MM1', '2018-MM1', 3, '2018'),
 (4, 'MM1', '2019-MM1', 3, '2019'),
 (27, 'MM1', '2020-MM1', 3, '2020'),
 (6, 'MM2', '2019-MM2', 3, '2019'),
@@ -85,21 +79,16 @@ INSERT INTO `kelas` (`id_kelas`, `nama_kelas`, `kode_kelas`, `id_jurusan`, `tahu
 (15, 'TKJ2', '2019-TKJ2', 2, '2019'),
 (16, 'TKJ3', '2019-TKJ3', 2, '2019'),
 (17, 'BDP', '2019-BDP', 7, '2019'),
-(18, 'AK1', '2017-AK1', 5, '2017'),
-(19, 'AK2', '2017-AK2', 5, '2017'),
-(20, 'AK3', '2017-AK3', 5, '2017'),
-(21, 'TN', '2017-TN', 7, '2017'),
-(22, 'RPL', '2017-RPL', 1, '2017'),
 (23, 'RPL', '2020-RPL', 1, '2020'),
 (24, 'TKJ1', '2020-TKJ1', 2, '2020'),
 (26, 'TKJ2', '2020-TKJ2', 2, '2020'),
 (28, 'MM2', '2020-MM2', 3, '2020'),
-(29, 'RPL', '2018-RPL', 1, '2018'),
 (30, 'BDP', '2020-BDP', 7, '2020'),
 (31, 'AK1', '2020-AK1', 5, '2020'),
 (32, 'OTKP1', '2020-OTKP1', 4, '2020'),
 (33, 'OTKP2', '2020-OTKP2', 4, '2020'),
-(34, 'PS', '2020-PS', 6, '2020');
+(34, 'PS', '2020-PS', 6, '2020'),
+(35, 'PPLG', '2021-PPLG', 1, '2021');
 
 -- --------------------------------------------------------
 
@@ -211,7 +200,7 @@ CREATE TABLE `spp` (
 --
 
 INSERT INTO `spp` (`id_spp`, `tahun_masuk`, `id_jurusan`, `nominal`) VALUES
-('2019-RPL', 2019, 1, 400000);
+('2019-RPL', 2019, 1, 450000);
 
 --
 -- Indexes for dumped tables
@@ -261,13 +250,13 @@ ALTER TABLE `spp`
 -- AUTO_INCREMENT for table `jurusan`
 --
 ALTER TABLE `jurusan`
-  MODIFY `id_jurusan` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_jurusan` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `kelas`
 --
 ALTER TABLE `kelas`
-  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `petugas`
