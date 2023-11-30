@@ -41,6 +41,13 @@
                                 <div class="form-group">
                                     <input type="password" class="form-control form-control-lg" placeholder="Password" name="password" required autocomplete="off">
                                 </div>
+                                <div class="form-group">
+
+                                    <?php echo $captcha;?>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-lg" placeholder="Captcha" name="captcha" required autocomplete="off">
+                                </div>
                                 <div class="mt-3 d-grid">
                                     <input type="submit" value="Login" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" >
                                 </div>
