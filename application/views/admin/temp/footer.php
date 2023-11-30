@@ -29,6 +29,7 @@
 <!-- endinject -->
 <!-- Custom js for this page -->
 <script src="<?= base_url('assets/'); ?>js/dashboard.js"></script>
+<script src="<?= base_url('assets/'); ?>js/my.js"></script>
 <script src="<?= base_url('assets/'); ?>js/todolist.js"></script>
 <!-- End custom js for this page -->
 </body>
