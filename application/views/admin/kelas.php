@@ -25,7 +25,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table">
+                            <table id="tabelKelas" style="width:100%" class="table">
                                 <thead>
                                     <tr>
                                         <th> ID Kelas </th>

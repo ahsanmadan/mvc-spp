@@ -25,12 +25,13 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table">
+                            <table id="tabelJurusan" style="width:100%" class="table">
                                 <thead>
                                     <tr>
                                         <th> ID Jurusan</th>
                                         <th> Nama Jurusan </th>
                                         <th> Jurusan </th>
+                                        <th> Aksi </th>
                                     </tr>
                                 </thead>
                                 <tbody>

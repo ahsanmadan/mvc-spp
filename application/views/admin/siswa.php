@@ -32,9 +32,7 @@
                                         <th> NIS </th>
                                         <th> Nama siswa </th>
                                         <th> Kelas </th>
-                                        <th> Alamat </th>
-                                        <th> No telp </th>
-                                        <th> Jumlah Bayar </th>
+                                        <th> Nominal SPP / Bulan </th>
                                         <th> Aksi </th>
                                     </tr>
                                 </thead>
@@ -59,12 +57,6 @@
                                                 $kelas = $query->row();
                                                 echo $kelas->kode_kelas;
                                                 ?>
-                                            </td>
-                                            <td>
-                                                <?= $row['alamat'] ?>
-                                            </td>
-                                            <td>
-                                                <?= $row['no_telp'] ?>
                                             </td>
                                             <td>
                                                 <?php
