@@ -3,27 +3,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Admin_model extends CI_Model
 {
-    public function tambahSiswa()
+    public function banyakData()
     {
-        // get data yang dikirim
-        $nisn = $this->input->post('nisn');
-        $nama = $this->input->post('nama_siswa');
-        $thn_masuk = $this->input->post('thn_masuk');
-        $gender = $this->input->post('gender');
-        $alamat = $this->input->post('alamat');
-        $no_hp = $this->input->post('no_hp');
+        $this->db->from('siswa');
+        $countSiswa = $this->db->count_all_results();
+        $this->db->from('kelas');
+        $countKelas = $this->db->count_all_results();
+        $this->db->from('jurusan');
+        $countJurusan = $this->db->count_all_results();
 
-        // satukan semua kedalam array data
-        $data = [
-            'nisn' => $nisn,
-            'nama_siswa' => $nama,
-            'tgl_masuk' => $thn_masuk,
-            'gender' => $gender,
-            'alamat' => $alamat,
-            'no_hp' => $no_hp
-        ];
-
-        // eksekusi query insert data ke table
-        $this->db->insert('siswa', $data);
+        return array(
+            'siswa' => $countSiswa,
+            'kelas' => $countKelas,
+            'jurusan' => $countJurusan
+        );
     }
 }

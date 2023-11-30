@@ -11,42 +11,59 @@
     </div>
     <div class="row">
       <div class="col-md-4 stretch-card grid-margin">
-        <div class="card bg-gradient-danger card-img-holder text-white">
-          <div class="card-body">
-            <img src="<?= base_url('assets/'); ?>images/dashboard/circle.svg" class="card-img-absolute"
-              alt="circle-image" />
-            <h4 class="font-weight-normal mb-3">Jumlah Siswa<i
-                class="ms-2 fa-solid fa-graduation-cap mdi-24px float-right"></i>
-            </h4>
-            <h2 class="mb-5">1.231 Siswa</h2>
-            <h6 class="card-text">311+ Siswa tahun ini</h6>
+        <a class="w-100 text-decoration-none" href="<?= base_url('siswa') ?>">
+          <div class="card bg-gradient-danger card-img-holder text-white">
+            <div class="card-body">
+              <img src="<?= base_url('assets/'); ?>images/dashboard/circle.svg" class="card-img-absolute"
+                alt="circle-image" />
+              <h4 class="font-weight-normal mb-3">Jumlah Siswa<i
+                  class="ms-2 fa-solid fa-graduation-cap mdi-24px float-right"></i>
+              </h4>
+              <h2 class="mb-5">
+                <?= $cSiswa ?>
+              </h2>
+              <h6 class="card-text"></h6>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
       <div class="col-md-4 stretch-card grid-margin">
-        <div class="card bg-gradient-info card-img-holder text-white">
-          <div class="card-body">
-            <img src="<?= base_url('assets/'); ?>images/dashboard/circle.svg" class="card-img-absolute"
-              alt="circle-image" />
-            <h4 class="font-weight-normal mb-3">none <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
-            </h4>
-            <h2 class="mb-5">none</h2>
-            <h6 class="card-text">none</h6>
+        <a class="w-100 text-decoration-none" href="<?= base_url('kelas') ?>">
+          <div class="card bg-gradient-info card-img-holder text-white">
+            <div class="card-body">
+              <img src="<?= base_url('assets/'); ?>images/dashboard/circle.svg" class="card-img-absolute"
+                alt="circle-image" />
+              <h4 class="font-weight-normal mb-3">Jumlah Kelas<i
+                  class="ms-2 fa-solid fa-school mdi-24px float-right"></i>
+              </h4>
+              <h2 class="mb-5">
+                <?= $cKelas ?>
+              </h2>
+              <h6 class="card-text">
+              </h6>
+            </div>
+
           </div>
-        </div>
+        </a>
       </div>
       <div class="col-md-4 stretch-card grid-margin">
-        <div class="card bg-gradient-success card-img-holder text-white">
-          <div class="card-body">
-            <img src="<?= base_url('assets/'); ?>images/dashboard/circle.svg" class="card-img-absolute"
-              alt="circle-image" />
-            <h4 class="font-weight-normal mb-3">none <i class="mdi mdi-diamond mdi-24px float-right"></i>
-            </h4>
-            <h2 class="mb-5">none</h2>
-            <h6 class="card-text">none</h6>
+        <a class="w-100 text-decoration-none" href="<?= base_url('jurusan') ?>">
+          <div class="card bg-gradient-success card-img-holder text-white">
+
+            <div class="card-body">
+              <img src="<?= base_url('assets/'); ?>images/dashboard/circle.svg" class="card-img-absolute"
+                alt="circle-image" />
+              <h4 class="font-weight-normal mb-3">Jumlah Jurusan<i
+                  class="ms-2 fa-solid fa-shirt mdi-24px float-right"></i>
+              </h4>
+              <h2 class="mb-5">
+                <?= $cJurusan ?>
+              </h2>
+              <h6 class="card-text"></h6>
+            </div>
           </div>
-        </div>
       </div>
+      </a>
     </div>
 
     <div class="row">
@@ -55,7 +72,7 @@
           <div class="card-body">
             <h4 class="card-title">Recent</h4>
             <div class="table-responsive">
-              <table class="table">
+              <table id="tabelRencent" class="table" style="width:100%">
                 <thead>
                   <tr>
                     <th> Assignee </th>
@@ -130,7 +147,9 @@
         <div class="modal-header">
         </div>
         <div class="modal-body fw-bold">
-          <h4>Konnichiwa <?= $this->session->userdata['full_name'] ?></h4>
+          <h4>Selamat Datang
+            <?= $this->session->userdata['full_name'] ?>
+          </h4>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
@@ -138,6 +157,6 @@
       </div>
     </div>
   </div>
-  
+
   <!-- content-wrapper ends -->
   <!-- partial:partials/_footer.php -->

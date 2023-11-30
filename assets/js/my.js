@@ -10,3 +10,6 @@ new DataTable('#tabelSpp', {
 new DataTable('#tabelJurusan', {
     responsive: true
 });
+new DataTable('#tabelRecent', {
+    responsive: true
+});
