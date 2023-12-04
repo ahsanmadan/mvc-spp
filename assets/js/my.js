@@ -13,3 +13,6 @@ new DataTable('#tabelJurusan', {
 new DataTable('#tabelRecent', {
     responsive: true
 });
+new DataTable('#tabelPembayaran', {
+    responsive: true
+});

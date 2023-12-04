@@ -153,6 +153,12 @@
                     </div>
                 </div>
                 <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('pembayaran'); ?>">
+                        <span class="menu-title">Data Pembayaran</span>
+                        <i class="fa-solid fa-file-invoice-dollar menu-icon me-1"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('user'); ?>">
                         <span class="menu-title">Data Petugas</span>
                         <i class="fa-solid fa-user-group menu-icon"></i>
