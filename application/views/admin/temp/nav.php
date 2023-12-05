@@ -67,17 +67,12 @@
                             <i class="mdi mdi-cached me-2 text-success text-kustom"></i> Activity Log </a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="<?= base_url('auth/logout') ?>">
-                            <i class="mdi mdi-logout me-2 text-primary text-kusto"></i> Signout </a>
+                            <i class="mdi mdi-logout me-2 text-primary text-kustom"></i> Signout </a>
                     </div>
                 </li>
                 <li class="nav-item d-none d-lg-block full-screen-link">
                     <a class="nav-link">
                         <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
-                    </a>
-                </li>
-                <li class="nav-item nav-logout d-none d-lg-block">
-                    <a class="nav-link" href="<?= base_url(); ?>">
-                        <i class="mdi mdi-power"></i>
                     </a>
                 </li>
             </ul>

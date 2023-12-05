@@ -6222,7 +6222,7 @@ fieldset:disabled .btn {
 }
 .dropdown-menu-profile[data-bs-popper] {
 	top: 100%;
-	left: 0;
+	left: 60px;
 	margin-top: 0.125rem;
 }
 
