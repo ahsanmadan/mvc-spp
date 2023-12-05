@@ -24,6 +24,7 @@ class Siswa extends CI_Controller
         $data['datas'] = $this->sm->semuaSiswa();
         $data['datasKelas'] = $this->sm->semuadataKelas();
         $data['datasSpp'] = $this->sm->semuadataSpp();
+        $data['datasJurusan'] = $this->sm->semuadataJurusan();
         //tampilkan data siswa
         $this->load->view('admin/temp/nav', $data);
         $this->load->view('admin/siswa');

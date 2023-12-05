@@ -31,8 +31,8 @@
                                         <th> NISN </th>
                                         <th> NIS </th>
                                         <th> Nama siswa </th>
-                                        <th> Kelas </th>
-                                        <th> Nominal SPP / Bulan </th>
+                                        <th> Tahun Angkatan </th>
+                                        <th> Kelas</th>
                                         <th> Aksi </th>
                                     </tr>
                                 </thead>
@@ -55,16 +55,15 @@
                                                 $id_kelas = $row['id_kelas'];
                                                 $query = $this->db->get_where('kelas', array('id_kelas' => $id_kelas));
                                                 $kelas = $query->row();
-                                                echo $kelas->kode_kelas;
+                                                echo $kelas->tahun_angkatan;
                                                 ?>
                                             </td>
                                             <td>
                                                 <?php
-                                                $id_spp = $row['id_spp'];
-                                                $query = $this->db->get_where('spp', array('id_spp' => $id_spp));
+                                                $id_kelas = $row['id_kelas'];
+                                                $query = $this->db->get_where('kelas', array('id_kelas' => $id_kelas));
                                                 $kelas = $query->row();
-                                                $nominal = $kelas->nominal;
-                                                echo "Rp. " . number_format($nominal, 0, ',', '.');
+                                                echo $kelas->nama_kelas;
                                                 ?>
                                             </td>
                                             <td>

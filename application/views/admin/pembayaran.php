@@ -24,14 +24,14 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table id="tabelPembayaran" style="width:100%" class="table">
+                        <table id="tabelPembayaran" style="width:100%" class="table">
                                 <thead>
                                     <tr>
                                         <th> NISN </th>
-                                        <th> Tanggal bayar </th>
-                                        <th> Bulan Bayar </th>
+                                        <th> NIS </th>
+                                        <th> Nama siswa </th>
                                         <th> Kelas </th>
-                                        <th> Jumlah Bayar </th>
+                                        <th> Nominal SPP / Bulan </th>
                                         <th> Aksi </th>
                                     </tr>
                                 </thead>
@@ -44,21 +44,32 @@
                                                 <?= $row['nisn'] ?>
                                             </td>
                                             <td>
-                                                <?= $row['tgl_bayar'] ?>
+                                                <?= $row['nis'] ?>
                                             </td>
                                             <td>
-                                                <?= $row['bulan_bayar'] ?>   
+                                                <?= $row['nama_siswa'] ?>
                                             </td>
                                             <td>
-                                                <?= $row['id_kelas'] ?>
+                                                <?php
+                                                $id_kelas = $row['id_kelas'];
+                                                $query = $this->db->get_where('kelas', array('id_kelas' => $id_kelas));
+                                                $kelas = $query->row();
+                                                echo $kelas->kode_kelas;
+                                                ?>
                                             </td>
                                             <td>
-                                                <?= $row['jumlah_bayar'] ?>
+                                                <?php
+                                                $id_spp = $row['id_spp'];
+                                                $query = $this->db->get_where('spp', array('id_spp' => $id_spp));
+                                                $kelas = $query->row();
+                                                $nominal = $kelas->nominal;
+                                                echo "Rp. " . number_format($nominal, 0, ',', '.');
+                                                ?>
                                             </td>
                                             <td>
                                                 <a type="button" data-bs-toggle="modal"
-                                                    data-bs-target=""
-                                                    class="btn btn-gradient-danger btn-sm">Delete</a>
+                                                    data-bs-target="#pembayaranModal<?= $row['nisn'] ?>"
+                                                    class="btn btn-gradient-success btn-sm">Bayar</a>
                                             </td>
                                         </tr>
                                         <?php $no++; ?>

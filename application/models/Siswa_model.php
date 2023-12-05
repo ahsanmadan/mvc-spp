@@ -31,6 +31,14 @@ class Siswa_model extends CI_Model
         $query = $this->db->get();
         return $query->result_array();
     }
+    public function semuadataJurusan()
+    {
+        $this->db->select('*');
+        $this->db->from('jurusan');
+
+        $query = $this->db->get();
+        return $query->result_array();
+    }
     public function tambahSiswa()
     {
         // get data yang dikirim

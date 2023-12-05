@@ -23,6 +23,9 @@ class Pembayaran extends CI_Controller
     {
         $data['title'] = 'Data Pembayaran';
         $data['datas'] = $this->pmm->semuaPembayaran();
+        $data['datas'] = $this->pmm->semuaSiswa();
+        $data['datasKelas'] = $this->pmm->semuadataKelas();
+        $data['datasSpp'] = $this->pmm->semuadataSpp();
         $this->load->view('admin/temp/nav',$data);
         $this->load->view('admin/pembayaran.php');
         $this->load->view('admin/temp/footer');
