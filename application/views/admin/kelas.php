@@ -59,7 +59,7 @@
                                             <td>
                                                 <a type="button" data-bs-toggle="modal"
                                                     data-bs-target="#hapusModal<?= $row['id_kelas'] ?>"
-                                                    class="btn btn-gradient-danger btn-sm">Delete</a>
+                                                    class="btn btn-gradient-danger btn-sm">Hapus</a>
                                             </td>
                                         </tr>
                                         <?php $no++; ?>
@@ -140,8 +140,8 @@
                                         </span>?</span>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Cancel</button>
-                                        <button type="submit" class="btn btn-gradient-danger btn-fw">Delete</button>
+                                            data-bs-dismiss="modal">Batal</button>
+                                        <button type="submit" class="btn btn-gradient-danger btn-fw">Hapus</button>
                                     </div>
                                 </form>
                             </div>

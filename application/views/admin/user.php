@@ -28,6 +28,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
+                                        <th>Aktivasi</th>
                                         <th> ID Petugas </th>
                                         <th> Nama Petugas </th>
                                         <th> Username </th>
@@ -39,7 +40,13 @@
                                     <?php $no = 1; ?>
                                     <?php foreach ($datas as $row): ?>
                                         <tr>
-
+                                            <td>
+                                                <?php if ($row['is_active'] == 0): ?>
+                                                    <a type="button" class="btn btn-gradient-success btn-sm">Aktifkan</a>
+                                                <?php else: ?>
+                                                    <a type="button" class="btn btn-gradient-danger btn-sm">Nonaktifkan</a>
+                                                <?php endif; ?>
+                                            </td>
                                             <td>
                                                 <?= $row['id_petugas'] ?>
                                             </td>
@@ -54,11 +61,11 @@
                                             </td>
                                             <td>
                                                 <a type="button" data-bs-toggle="modal"
-                                                    data-bs-target="#editUserModal<?= $row['id_petugas'] ?>"
+                                                    data-bs-target="#editModal<?= $row['id_petugas'] ?>"
                                                     class="btn btn-gradient-warning btn-sm">Edit</a>
                                                 <a type="button" data-bs-toggle="modal"
-                                                    data-bs-target="#hapusUserModal<?= $row['id_petugas'] ?>"
-                                                    class="btn btn-gradient-danger btn-sm">Delete</a>
+                                                    data-bs-target="#hapusModal<?= $row['id_petugas'] ?>"
+                                                    class="btn btn-gradient-danger btn-sm">Hapus</a>
                                             </td>
                                         </tr>
                                         <?php $no++; ?>
@@ -133,12 +140,12 @@
 <?php $no_modal_delete = 1; ?>
 <?php foreach ($datas as $row): ?>
     <td>
-        <div class="modal fade" id="hapusModal<?= $row['id_petugas'] ?>" tabindex="-1"
-            aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="hapusModal<?= $row['id_petugas'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Delete
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus
                             User
                         </h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -146,12 +153,13 @@
                     <div class="modal-body">
                         <form class="row g-3" action="<?= base_url('user/hapusUser/') . $row['id_petugas'] ?>"
                             method="post">
-                            <span style="font-size:16px">Apakah anda yakin ingin menghapus data <span class="text-capitalize">
+                            <span style="font-size:16px">Apakah anda yakin ingin menghapus data <span
+                                    class="text-capitalize">
                                     <?= $row['username'] ?>
                                 </span>?</span>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-gradient-danger btn-fw">Delete</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                <button type="submit" class="btn btn-gradient-danger btn-fw">Hapus</button>
                             </div>
                         </form>
                     </div>

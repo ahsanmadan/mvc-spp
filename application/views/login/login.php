@@ -36,20 +36,20 @@
                             </div>
                             <form class="pt-3" method="POST" action="<?= base_url('auth') ?>">
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-lg" placeholder="Username" name="username" required autocomplete="off">
+                                    <input type="text" class="form-control form-control-lg" placeholder="Nama Pengguna" name="username" required autocomplete="off">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control form-control-lg" placeholder="Password" name="password" required autocomplete="off">
+                                    <input type="password" class="form-control form-control-lg" placeholder="Kata sandi" name="password" required autocomplete="off">
                                 </div>
                                 <div class="form-group">
 
                                     <?php echo $captcha;?>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-lg" placeholder="Captcha" name="captcha" required autocomplete="off">
+                                    <input type="text" class="form-control form-control-lg" placeholder="Silahkan masukkan captcha diatas" name="captcha" required autocomplete="off">
                                 </div>
                                 <div class="mt-3 d-grid">
-                                    <input type="submit" value="Login" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" >
+                                    <input type="submit" value="Masuk" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" >
                                 </div>
                             </form>
                         </div>

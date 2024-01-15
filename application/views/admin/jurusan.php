@@ -54,7 +54,7 @@
                                                     class="btn btn-gradient-warning btn-sm">Edit</a>
                                                 <a type="button" data-bs-toggle="modal"
                                                     data-bs-target="#hapusJurusanModal<?= $row['id_jurusan'] ?>"
-                                                    class="btn btn-gradient-danger btn-sm">Delete</a>
+                                                    class="btn btn-gradient-danger btn-sm">Hapus</a>
                                         </tr>
                                         <?php $no++; ?>
                                     <?php endforeach; ?>
@@ -93,7 +93,7 @@
                                 </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
                             <button type="submit" class="btn btn-gradient-success btn-fw">Update</button>
                         </div>
                         </form>
@@ -124,8 +124,8 @@
                                     <?= $row['nama_jurusan'] ?>
                                 </span>?</span>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-gradient-danger btn-fw">Delete</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                <button type="submit" class="btn btn-gradient-danger btn-fw">Hapus</button>
                             </div>
                         </form>
                     </div>
@@ -159,8 +159,8 @@
                     </div>
                   
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-gradient-primary btn-fw">Submit</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-gradient-primary btn-fw">Tambah</button>
                     </div>
                 </form>
             </div>
