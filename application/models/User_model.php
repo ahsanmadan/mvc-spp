@@ -48,4 +48,14 @@ class User_model extends CI_Model
     public function hapusUser($id){
         $this->db->delete('petugas', ['id_petugas' => $id]);
     }
+
+    public function aktifAkun($id)
+    {
+        $this->db->where('id_petugas', $id)->update('petugas', array('is_active' => 1));
+    }
+
+    public function nonaktifAkun($id)
+    {
+        $this->db->where('id_petugas', $id)->update('petugas', array('is_active' => 0));
+    }
 }

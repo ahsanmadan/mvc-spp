@@ -109,8 +109,8 @@
                                     name="tahun">
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-gradient-primary btn-fw">Submit</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                <button type="submit" class="btn btn-gradient-primary btn-fw">Tambah</button>
                             </div>
                         </form>
                     </div>
