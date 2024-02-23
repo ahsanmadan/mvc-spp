@@ -8,7 +8,7 @@ class User extends CI_Controller
         // Your own constructor code
         $this->load->model('User_model', 'um'); //load model Admin
         // cek login
-        if(!$this->session->userdata('username')) {
+        if (!$this->session->userdata('username')) {
             $this->session->set_flashdata(
                 'login_message',
                 '<div class="alert alert-danger" role="alert">
@@ -58,7 +58,8 @@ class User extends CI_Controller
         redirect('user');
     }
 
-    public function editUser($id){
+    public function editUser($id)
+    {
         $this->um->editUser($id);
         $this->session->set_flashdata(
             'message',
@@ -69,6 +70,29 @@ class User extends CI_Controller
         // arahkan ke halaman..
         redirect('user');
     }
+    public function aAkun($id)
+    {
+        $this->um->aktifAkun($id);
+        $this->session->set_flashdata(
+            'message',
+            '<div class="alert alert-success" role="alert">
+            Akun Berhasil Diaktifkan!
+           </div>'
+        );
+        // arahkan ke halaman..
+        redirect('user');
+    }
+    public function naAkun($id)
+    {
+        $this->um->nonaktifAkun($id);
+        $this->session->set_flashdata(
+            'message',
+            '<div class="alert alert-success" role="alert">
+            Akun Berhasil Dinonaktifkan!
+           </div>'
+        );
+        // arahkan ke halaman..
+        redirect('user');
+    }
 }
 
-?>

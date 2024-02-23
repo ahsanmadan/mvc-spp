@@ -167,8 +167,8 @@
                                         <?= $row['id_spp'] ?>
                                     </span>?</span>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                    <button type="submit" class="btn btn-gradient-danger btn-fw">Delete</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                    <button type="submit" class="btn btn-gradient-danger btn-fw">Hapus</button>
                                 </div>
                             </form>
                         </div>
