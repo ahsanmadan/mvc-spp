@@ -86,9 +86,12 @@
                             <td>Rp. 420.000</td>
                             <td> <span class="badge text-bg-danger bg-opacity-75">BELUM BAYAR</span></td>
                         </tr>
-                        
                     </tbody>
                 </table>
+                <div class="d-flex">
+
+                    <a href="<?= base_url("/") ?>" class="btn btn-danger my-3 ms-auto">Kembali</a>
+                </div>
             </div>
         </div>
     </div>
