@@ -24,17 +24,17 @@
     </div>
 
     <div class="container">
-        <div class="row flex-row-reverse d-flex justify-content-center align-items-center">
+        <div class="row flex-row-reverse d-flex justify-content-center align-items-center" >
             <div class="col-md-6">
                 <img src="<?= base_url("assets/img/home-clipart.png") ?>" alt="" class="img-fluid">
             </div>
             <div class="col-md-6 p-5">
                 <h1 class="text-primary">Dashboard</h1>
                 <p class="text-secondary fs-3">SMK Muhammadiyah 2 Pekanbaru</p>
-                <p class="text-secpndary">Aplikasi pembayaran SPP berbasis web</p>
+                <p class="text-secondary">Aplikasi pembayaran SPP berbasis web</p>
                 <div class="d-grid gap-2 d-md-block">
-                    <a href="<?= base_url("/auth") ?>" class="btn btn-outline-primary me-2">Login</a>
-                    <a href="" class="btn btn-outline-success">Cek Pembayaran</a>
+                    <a href="<?= base_url("/admin") ?>" class="btn btn-outline-primary me-2">Login</a>
+                    <a href="<?= base_url("/check") ?>" class="btn btn-outline-success">Cek Pembayaran</a>
                 </div>
             </div>
         </div>
