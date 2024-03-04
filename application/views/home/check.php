@@ -78,13 +78,13 @@
                             <td>4</td>
                             <td>September 2024</td>
                             <td>Rp. 420.000</td>
-                            <td> <span class="badge text-bg-danger bg-opacity-75">Belum Bayar</span></td>
+                            <td> <span class="badge text-bg-danger bg-opacity-75">BELUM BAYAR</span></td>
                         </tr>
                         <tr>
                             <td>4</td>
                             <td>Oktober 2024</td>
                             <td>Rp. 420.000</td>
-                            <td> <span class="badge text-bg-danger bg-opacity-75">Belum Bayar</span></td>
+                            <td> <span class="badge text-bg-danger bg-opacity-75">BELUM BAYAR</span></td>
                         </tr>
                         
                     </tbody>
