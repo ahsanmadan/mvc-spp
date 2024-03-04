@@ -5,18 +5,19 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #483957;
+    background-color: #424a72;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: opacity 0.5s ease-out;
 }
 
 .loader {
     width: 40px;
     aspect-ratio: 1;
-    --c: linear-gradient(#b960f1 0 0);
-    --r1: radial-gradient(farthest-side at bottom,#b960f1 93%,#0000);
-    --r2: radial-gradient(farthest-side at top   ,#b960f1 93%,#0000);
+    --c: linear-gradient(#4e6eff 0 0);
+    --r1: radial-gradient(farthest-side at bottom,#4e6eff 93%,#0000);
+    --r2: radial-gradient(farthest-side at top   ,#4e6eff 93%,#0000);
     background: 
       var(--c) ,var(--r1),var(--r2),
       var(--c) ,var(--r1),var(--r2),

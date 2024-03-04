@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="<?= base_url('assets/') ?>images/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="<?= base_url('assets/css/home.css') ?>">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
@@ -18,13 +18,31 @@
     }
 </style>
 
-<body>
+<body style="background-color: #FAFAFA;">
     <div class="loader-wrapper" id="preloader">
         <div class="loader"></div>
     </div>
 
-    <script src="https://cdnjs.cloudflare/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <div class="container">
+        <div class="row flex-row-reverse d-flex justify-content-center align-items-center">
+            <div class="col-md-6">
+                <img src="<?= base_url("assets/img/home-clipart.png") ?>" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6 p-5">
+                <h1 class="text-primary">Dashboard</h1>
+                <p class="text-secondary fs-3">SMK Muhammadiyah 2 Pekanbaru</p>
+                <p class="text-secpndary">Aplikasi pembayaran SPP berbasis web</p>
+                <div class="d-grid gap-2 d-md-block">
+                    <a href="<?= base_url("/auth") ?>" class="btn btn-outline-primary me-2">Login</a>
+                    <a href="" class="btn btn-outline-success">Cek Pembayaran</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         // Wait for the DOM to be fully loaded
         document.addEventListener("DOMContentLoaded", function() {
@@ -34,7 +52,7 @@
                 preloader.style.opacity = "0";
                 setTimeout(function() {
                     preloader.style.display = "none";
-                }, 500); // Adjust the timeout to match the transition duration
+                }, 2000); // Adjust the timeout to match the transition duration
             });
         });
     </script>
