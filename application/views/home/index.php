@@ -26,7 +26,7 @@
     <div class="container">
         <div class="row flex-row-reverse d-flex justify-content-center align-items-center" >
             <div class="col-md-6">
-                <img src="<?= base_url("assets/img/home-clipart.png") ?>" alt="" class="img-fluid">
+                <img src="<?= base_url("assets/img/clip.svg") ?>" alt="" class="img-fluid">
             </div>
             <div class="col-md-6 p-5">
                 <h1 class="text-primary">Dashboard</h1>
