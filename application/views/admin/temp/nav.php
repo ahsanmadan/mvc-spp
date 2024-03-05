@@ -147,12 +147,29 @@
                         </ul>
                     </div>
                 </div>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('pembayaran'); ?>">
+                <div class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#ui-basics" aria-expanded="false"
+                        aria-controls="ui-basic">
                         <span class="menu-title">Data Pembayaran</span>
+                        <i class="menu-arrow"></i>
                         <i class="fa-solid fa-file-invoice-dollar menu-icon me-1"></i>
                     </a>
-                </li>
+                    <div class="collapse" id="ui-basics">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= base_url('pembayaran'); ?>">
+                                    <span class="menu-title">Pembayaran</span>
+
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= base_url('riwayat'); ?>">
+                                    <span class="menu-title">Riwayat Pembayaran</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('user'); ?>">
                         <span class="menu-title">Data Petugas</span>
