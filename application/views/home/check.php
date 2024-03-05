@@ -29,10 +29,10 @@
 
                 <!-- Bagian Input -->
                 <div class="mb-3">
-                    <input type="text" class="form-control mx-auto" placeholder="NISN" style="width: 60%;">
+                <input type="text" class="form-control mx-auto" placeholder="NISN" style="width: 60%;">
                 </div>
                 <div class="mb-3">
-                    <input type="date" class="form-control mx-auto" placeholder="dd-mm-yyyy" style="width: 60%;">
+                <input type="text" class="form-control mx-auto" placeholder="NIS" style="width: 60%;">
                 </div>
                 <div class="d-grid">
                     <button class="btn btn-primary mx-auto" type="button" style="width: 60%;">Cari</button>
