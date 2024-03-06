@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2023 at 08:13 AM
+-- Generation Time: Mar 05, 2024 at 08:28 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -38,12 +38,13 @@ CREATE TABLE `jurusan` (
 --
 
 INSERT INTO `jurusan` (`id_jurusan`, `nama_jurusan`, `jurusan`) VALUES
-(1, 'Rekayasa Perangkat Lunak', 'RPL'),
+(1, 'Pengembangan Perangkat Lunak Dan Gim', 'PPLG'),
 (2, 'Teknik Komputer Jaringan', 'TKJ'),
 (4, 'Otomatisasi Tata Kelola Perkantoran', 'OTKP'),
 (5, 'Akuntansi dan Keuangan Lembaga', 'AKL'),
 (6, 'Perbankan Syariah', 'PS'),
 (7, 'Bisnis Daring dan Pemasaran', 'BDP'),
+(13, 'Farmasi Kesehatan ', 'FK'),
 (11, 'Desain Komunikasi Visual', 'DKV');
 
 -- --------------------------------------------------------
@@ -83,6 +84,7 @@ INSERT INTO `kelas` (`id_kelas`, `nama_kelas`, `kode_kelas`, `id_jurusan`, `tahu
 (24, 'TKJ1', '2020-TKJ1', 2, '2020'),
 (26, 'TKJ2', '2020-TKJ2', 2, '2020'),
 (28, 'MM2', '2020-MM2', 3, '2020'),
+(36, 'DKV2', '2021-DKV', 11, '2021'),
 (30, 'BDP', '2020-BDP', 7, '2020'),
 (31, 'AK1', '2020-AK1', 5, '2020'),
 (32, 'OTKP1', '2020-OTKP1', 4, '2020'),
@@ -108,34 +110,6 @@ CREATE TABLE `pembayaran` (
   `jumlah_bayar` int(7) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
---
--- Dumping data for table `pembayaran`
---
-
-INSERT INTO `pembayaran` (`id_pembayaran`, `id_petugas`, `nisn`, `tgl_bayar`, `bulan_bayar`, `tahun_bayar`, `id_kelas`, `id_spp`, `jumlah_bayar`) VALUES
-('200226231123', 3, '0024035996', '2020-02-26', 1, 2020, 22, '2017RPL', 400000),
-('200226231211', 3, '0023870498', '2020-02-26', 1, 2020, 22, '2017RPL', 400000),
-('200226231411', 3, '0021294899', '2020-02-26', 12, 2019, 21, '2017BDP', 300000),
-('200821201457', 3, '0042847138', '2020-08-21', 8, 2020, 24, '2020TKJ', 400000),
-('200826220359', 3, '0055167253', '2020-08-26', 8, 2020, 30, '2020BDP', 300000),
-('200827001903', 3, '0045176224', '2020-08-27', 8, 2020, 24, '2020TKJ', 400000),
-('200827001944', 3, '3051528870', '2020-08-27', 8, 2020, 24, '2020TKJ', 400000),
-('200906130253', 3, '0043155380', '2020-09-06', 9, 2020, 4, '2019MM', 400000),
-('200906133319', 3, '0043155380', '2020-09-06', 10, 2020, 4, '2019MM', 400000),
-('200906133300', 3, '0042899366', '2020-09-06', 9, 2020, 4, '2019MM', 400000),
-('200906132903', 3, '0032647688', '2020-09-06', 9, 2020, 4, '2019MM', 400000),
-('200906132849', 3, '0037276839', '2020-09-06', 9, 2020, 4, '2019MM', 400000),
-('200908214625', 3, '0068085879', '2020-09-08', 9, 2020, 4, '2019MM', 400000),
-('200908215347', 3, '0043107953', '2020-09-08', 7, 2020, 4, '2019MM', 400000),
-('200908215356', 3, '0043107953', '2020-09-08', 8, 2020, 4, '2019MM', 400000),
-('200908215403', 3, '0043107953', '2020-09-08', 9, 2020, 4, '2019MM', 400000),
-('200908215411', 3, '0043107953', '2020-09-08', 10, 2020, 4, '2019MM', 400000),
-('210215114953', 3, '0048857701', '2021-02-15', 1, 2021, 23, '2020RPL', 400000),
-('210313135258', 3, '0048857701', '2021-03-13', 2, 2021, 23, '2020RPL', 400000),
-('210326160207', 3, '0048857701', '2021-03-26', 3, 2021, 23, '2020RPL', 400000),
-('210326165945', 3, '0046181791', '2021-03-26', 3, 2021, 31, '2020AKL', 300000),
-('210327170854', 5, '3051528870', '2021-03-27', 3, 2021, 24, '2020TKJ', 400000);
-
 -- --------------------------------------------------------
 
 --
@@ -156,8 +130,8 @@ CREATE TABLE `petugas` (
 --
 
 INSERT INTO `petugas` (`id_petugas`, `username`, `password`, `nama_petugas`, `level`, `is_active`) VALUES
-(9, 'NjikJiro', '$2y$10$XUBVxoXbxRZXK50nGnYKBOrHuyTT.JRf3cWwAQpVXUjoqqjwIcbPm', 'Adyadma Renjiro', 'admin', 1),
-(10, 'Ahsan', '$2y$10$qiFUo3O.1HQgHhg05IqGdOJmQwb7Nt1Dc89nttQWZJu5OhAP1HbBu', 'Ahsan Ramadan', 'admin', 1);
+(3, 'Ahsan', '$2y$10$qiFUo3O.1HQgHhg05IqGdOJmQwb7Nt1Dc89nttQWZJu5OhAP1HbBu', 'Ahsan Ramadan', 'admin', 1),
+(5, 'NjikJiro', '$2y$10$XUBVxoXbxRZXK50nGnYKBOrHuyTT.JRf3cWwAQpVXUjoqqjwIcbPm', 'Adyadma Renjiro', 'admin', 1);
 
 -- --------------------------------------------------------
 
@@ -180,7 +154,7 @@ CREATE TABLE `siswa` (
 --
 
 INSERT INTO `siswa` (`nisn`, `nis`, `nama_siswa`, `id_kelas`, `alamat`, `no_telp`, `id_spp`) VALUES
-('0061097004', '1311', 'Ahsan Ramadan', 7, 'Jalan barau barau', '089621500376', '2019-RPL');
+('0061097004', '2123', 'Ahsan Ramadan', 35, 'Jalan Barau barau', '089621500376', '2021-PPLG');
 
 -- --------------------------------------------------------
 
@@ -200,7 +174,8 @@ CREATE TABLE `spp` (
 --
 
 INSERT INTO `spp` (`id_spp`, `tahun_masuk`, `id_jurusan`, `nominal`) VALUES
-('2019-RPL', 2019, 1, 450000);
+('2021-DKV', 2021, 11, 400000),
+('2021-PPLG', 2021, 1, 400000);
 
 --
 -- Indexes for dumped tables
@@ -250,13 +225,13 @@ ALTER TABLE `spp`
 -- AUTO_INCREMENT for table `jurusan`
 --
 ALTER TABLE `jurusan`
-  MODIFY `id_jurusan` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_jurusan` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `kelas`
 --
 ALTER TABLE `kelas`
-  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `petugas`
